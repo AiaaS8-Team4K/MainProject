@@ -7,17 +7,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Team4K 메인화면</title>
 	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src="js/index.js" ></script>
 </head>
 <body>
 	<jsp:include page ="./includes/header.jsp" flush="true"/>
     <main class="main-content">
         <section class="hero">
-            <img src="images/indexHero.jpg" alt="Hero Video"></img>
+    		<div class="carousel">
+        		<img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
+        		<a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="예산 지킴이" dataText2="두번째 텍스트"></a>
+        		<a href="#"><img src="images/mq1280.jpg" alt="Hero Image 3" dataText1="탄소배출량 지킴이" dataText2="세번째 텍스트"></a>
+        		<a href="#"><img src="images/mq1920.jpg" alt="Hero Image 4" dataText1="네번째 텍스트" dataText2="네번째 텍스트"></a>
+        		<div class="hero-text">
+                	<h1>Abundant energy makes a light heart.</h1>
+                	<h3>에너지 안보 지킴이 서비스</h3>
+            	</div>
             <!-- <img src="/htmlEdu/layout/images/mq1920.jpg" alt="Hero Image"> -->
-            <div class="hero-text">
-                <h1>Abundant energy makes a light heart.</h1>
-                <h3>에너지 안보 지킴이 서비스</h3>
-            </div>
+    			<div class="carousel-buttons">
+        			<button class="prev">&#10094;</button>
+        			<button class="next">&#10095;</button>
+    			</div>
+    		</div>
         </section>
         <section class="philosophy">
             <div class="container">
