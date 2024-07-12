@@ -3,16 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.css" integrity="sha512-earFJuyxuk1UIfnUubV3DGk2ysSejjmhMPb/4OXsqII9qmIbEwa1AaXrTqo4ivYizpbfyjXFZi6wENs94/BKWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.extensions.min.js" integrity="sha512-CG4suntOelKyziz99VyC3BrbQ60IOtpJ9RYQvI/0d6TdYWStN69gCb9OpPMlym+3OmNAr357Kv6FVqTk25Ej5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Team4K 메인화면</title>
 	<link rel="stylesheet" href="css/index.css">
-	<script type="text/javascript" src="js/index.js" ></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<jsp:include page ="./includes/header.jsp" flush="true"/>
+	<div id="fullpage">
     <main class="main-content">
-        <section class="hero">
+        <div class="section hero">
+        <div clss="section-content">
     		<div class="carousel">
         		<img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
         		<a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="예산 지킴이" dataText2="두번째 텍스트"></a>
@@ -28,8 +34,10 @@
         			<button class="next">&#10095;</button>
     			</div>
     		</div>
-        </section>
-        <section class="philosophy">
+        </div>
+        </div>
+        <div class="section philosophy">
+        <div clss="section-content">
             <div class="container">
                 <h2>Philosophy</h2>
                 <div class="philosophy-items">
@@ -50,8 +58,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="history">
+        </div>
+        </div>
+        <div class="section history">
+        <div clss="section-content">
             <div class="container">
                 <h2>History</h2>
                 <div class="history-items">
@@ -69,14 +79,18 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="partners">
+        </div>
+        </div>
+        <div class="section partners">
+        <div clss="section-content">
             <div class="container">
                 <h2>Our Partner</h2>
                 <img src="images/mq1280.jpg" alt="세계 지도">
             </div>
-        </section>
-        <section class="location">
+        </div>
+        </div>
+        <div class="section location">
+        <div clss="section-content">
             <div class="container">
                 <h2>Location</h2>
                 <div class="location-items">
@@ -92,8 +106,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        </div>
     </main>
+    </div>
 	<jsp:include page ="./includes/footer.jsp" flush="true"/>
 </body>
 </html>
