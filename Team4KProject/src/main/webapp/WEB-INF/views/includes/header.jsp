@@ -135,10 +135,10 @@
             <div class="box navBox">
                 <nav id="menuNav">
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">회사소개</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 분석 정보</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 예산 분석 정보</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 효율 분석 정보</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">전기차 전력소비 예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 수입비용 예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">온실가스 배출량 예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">기후변화 영향 예측</span></a></li>
                     </ul>
                 </nav>
                 <div id="menuIcon">☰</div>
