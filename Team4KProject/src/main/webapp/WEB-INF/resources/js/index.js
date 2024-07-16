@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     new fullpage('#fullpage', {
     licenseKey: 'gplv3-license',
     autoScrolling: true,
-    scrollHorizontally: true,
     navigation: true,
     navigationPosition: 'right',
-    showActiveTooltip: true,
-    slidesNavigation: true,
     controlArrows: false,
     anchors: ['hero', 'philosophy', 'history', 'partners', 'location'],
     verticalCentered: true,  // 섹션 내용을 수직 중앙 정렬
+    scrollOverflow: false,
+    fitToSection: false,
     responsiveHeight: 600,
     afterRender: function() {
         // 초기 로드 시 첫 번째 섹션 중앙 정렬

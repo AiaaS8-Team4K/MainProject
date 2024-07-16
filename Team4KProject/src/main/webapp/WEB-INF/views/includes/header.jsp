@@ -3,25 +3,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Header</title>
     <style>
-    header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    top: 0;
-}
-        body {
-            padding: 0;
-            margin: 0 auto;
-        }
-        img {
-            height: 100%;
-            width: auto;
-            object-fit: cover;
-        }
+    	header {
+    	position: fixed;
+    	left: 0;
+    	right: 0;
+    	z-index: 1000;
+    	top: 0;
+		}
         #headGrid{
             padding: 0;
             margin: 0 auto;
@@ -36,13 +32,18 @@
             grid-column: 1/2;
             grid-row: 1/3;
         }
+        
+        .logoBox img{
+            height: 100%;
+            width: auto;
+        }
+        
         .navBox{
-            grid-column: 3/6;
+            grid-column: 2/7;
             grid-row: 2/3;
-            position: static;
         }
         .navBox > #menuNav > ul{
-            font-size: 0.8vw;
+            font-size: calc( 0.7vw + 0.7vh );
             list-style: none;
             display: flex;
             width: 100%;
@@ -50,6 +51,17 @@
             margin: 0;
             padding: 0;
         }
+        a{
+        	text-decoration: none;
+        	color: black;
+       	}
+       	
+		.do-hyeon-regular {
+  			font-family: "Do Hyeon", sans-serif;
+  			font-weight: 400;
+  			font-style: normal;
+		}
+       	
         #menuIcon {
             display: none;
             font-size: calc( 2vw + 2vh );
@@ -59,7 +71,6 @@
             top: 2vh;
             z-index: 1002;
             background-color: transparent;
-            /* padding: 10px; */
             border-radius: 5px;
             transition: transform 0.3s ease;
         }
@@ -74,7 +85,7 @@
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
+            z-index: 999;
         }
         .overlay.show {
             display: block;
@@ -88,13 +99,13 @@
                 flex-direction: column;
                 position: fixed;
                 background-color: #f9f9f9;
-                width: 200px;
+                width: 20vw;
                 right: 0;
                 top: 0;
                 bottom: 0;
                 padding: 60px 0 20px;
                 z-index: 1001;
-                box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+                /* box-shadow: -2px 0 5px rgba(0,0,0,0.1); */
                 overflow-y: auto;
             }
             .navBox > #menuNav > ul.show {
@@ -124,10 +135,10 @@
             <div class="box navBox">
                 <nav id="menuNav">
                     <ul>
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">에너지 분석 정보</a></li>
-                        <li><a href="#">에너지 예산 분석 정보</a></li>
-                        <li><a href="#">에너지 효율 분석 정보</a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">회사소개</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 분석 정보</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 예산 분석 정보</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 효율 분석 정보</span></a></li>
                     </ul>
                 </nav>
                 <div id="menuIcon">☰</div>

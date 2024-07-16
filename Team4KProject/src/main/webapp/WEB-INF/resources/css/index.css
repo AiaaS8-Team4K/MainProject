@@ -1,9 +1,3 @@
-* {
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 html {
 	font-size: 16px;
 }
@@ -30,10 +24,15 @@ body {
 	color: #333;
 }
 
+body img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .container {
-	width: 90%;
-	margin: 0 auto;
-	max-width: 1200px;	
+	width: 90vw;
+	max-height: 80vh;
 }
 
 .container .nav {
@@ -103,43 +102,20 @@ body {
 
 .section {
     transition: opacity 0.5s ease-in-out;
-    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;  /* 뷰포트 높이로 설정 */
+    height: 100vh;
+    
+    overflow: hidden;
 }
 
-.section.active {
-    opacity: 1;
-}
-
-.fp-tableCell {
-    display: flex;
+.fp-overflow{
+	display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    height: 100vh !important;  /* fullPage.js의 기본 높이 설정 덮어쓰기 */
 }
-
-/* 섹션 내용을 감싸는 컨테이너 */
-.section-content {
-    max-width: 80%;  /* 필요에 따라 조정 */
-    max-height: 80vh;  /* 필요에 따라 조정 */
-    overflow: auto;
-}
-
-/* 네비게이션 스타일 */
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span {
-    background: #333;
-}
-
-.fp-viewing-hero #fp-nav ul li a span, 
-.fp-viewing-hero .fp-slidesNav ul li a span {
-    background: #fff;
-}
-
-
 
 
 
@@ -175,18 +151,8 @@ body {
 }
 
 .partners img, .philosophy img, .history img, .location img {
-	width: 100%;
-	height: auto;
-}
-
-.footer {
-	background: #333;
-	color: #fff;
-	text-align: center;
-	padding: 1rem 0;
-	margin-top: 2rem;
-	border-top-left-radius: 40%;
-	border-top-right-radius: 40%;
+	height: 50%;
+    object-fit: cover;
 }
 
 /* Responsive */

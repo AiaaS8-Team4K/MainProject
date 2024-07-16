@@ -18,7 +18,6 @@
 	<div id="fullpage">
     <main class="main-content">
         <div class="section hero">
-        <div clss="section-content">
     		<div class="carousel">
         		<img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
         		<a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="예산 지킴이" dataText2="두번째 텍스트"></a>
@@ -35,9 +34,7 @@
     			</div>
     		</div>
         </div>
-        </div>
         <div class="section philosophy">
-        <div clss="section-content">
             <div class="container">
                 <h2>Philosophy</h2>
                 <div class="philosophy-items">
@@ -59,9 +56,7 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="section history">
-        <div clss="section-content">
             <div class="container">
                 <h2>History</h2>
                 <div class="history-items">
@@ -80,17 +75,13 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="section partners">
-        <div clss="section-content">
             <div class="container">
                 <h2>Our Partner</h2>
                 <img src="images/mq1280.jpg" alt="세계 지도">
             </div>
         </div>
-        </div>
         <div class="section location">
-        <div clss="section-content">
             <div class="container">
                 <h2>Location</h2>
                 <div class="location-items">
@@ -106,7 +97,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     </div>
