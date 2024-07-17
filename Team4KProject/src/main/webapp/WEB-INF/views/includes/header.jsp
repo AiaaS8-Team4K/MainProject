@@ -11,46 +11,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Header</title>
     <style>
-    	header {
-    	position: fixed;
-    	left: 0;
-    	right: 0;
-    	z-index: 1000;
-    	top: 0;
+    	.header {
+    		position: fixed;
+    		left: 0;
+    		right: 0;
+    		z-index: 1000;
+    		top: 0;
+    		overflow: hidden;
+    		background: white;
+    		height: 6vh;
+    		width: 100vw;
+        	transition: height 0.3s ease;
+        	display: flex;
 		}
         #headGrid{
             padding: 0;
             margin: 0 auto;
             width: 85vw;
-            height: 8vh;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(2,1fr);
+            height: 100%;
+            display: flex;
             position: relative;
+        	justify-content: space-between;
         }
         .logoBox{
-            grid-column: 1/2;
-            grid-row: 1/3;
+        	width: 15vw;
+        	height: 6vh;
         }
         
         .logoBox img{
-            height: 100%;
-            width: auto;
+         	object-fit: contain;
+        }
+        .navBox{
+        	width: 55vw;
+        	height: 100%;
+        	display: inline-flex;
+        }
+        .menuNav{
+        	padding:0;
+        	margin:0 auto;
+        	margin-top: 2vh;
+        	width: 100%;
+        	display:flex;
+        	justify-content: space-around;
         }
         
-        .navBox{
-            grid-column: 2/7;
-            grid-row: 2/3;
-        }
-        .navBox > #menuNav > ul{
-            font-size: calc( 0.7vw + 0.7vh );
+        .navBox > .menuNav > ul{
             list-style: none;
             display: flex;
-            width: 100%;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
+            flex-direction: column;
+            width: 20%;
+        	padding:0;
+        	margin:0 auto;
         }
+        
+        .navBox > .menuNav > ul > li:first-child{
+            font-size: calc( 0.8vw + 0.8vh );
+            margin: 0 0 2vh;
+        }
+        
+        .navBox > .menuNav > ul > li{
+            font-size: calc( 0.6vw + 0.6vh );
+            margin: 0 0 1vh;
+        }
+        
         a{
         	text-decoration: none;
         	color: black;
@@ -89,13 +112,18 @@
         }
         .overlay.show {
             display: block;
-        }
+        }@media (min-width: 769px) {
+        	/* hover 관련 내용 작성 */
+        	.header:hover {
+        	height: 20vh;
+        	}
+            }
         @media (max-width: 768px) {
             #menuIcon {
                 display: block;
             }
-            .navBox > #menuNav > ul {
-                display: none;
+            .navBox > .menuNav.show{
+            	display: flex;
                 flex-direction: column;
                 position: fixed;
                 background-color: #f9f9f9;
@@ -103,42 +131,57 @@
                 right: 0;
                 top: 0;
                 bottom: 0;
+                margin: 0;
                 padding: 60px 0 20px;
                 z-index: 1001;
-                /* box-shadow: -2px 0 5px rgba(0,0,0,0.1); */
                 overflow-y: auto;
             }
-            .navBox > #menuNav > ul.show {
-                display: flex !important;
+            .navBox > .menuNav > ul {
+                display: none;
             }
-            .navBox > #menuNav > ul > li {
-                padding: 15px;
+            .navBox > .menuNav > ul.show {
+                display: flex !important;
+                flex-direction: column;
+                width: 50%;
+            }
+            .navBox > .menuNav > ul > li {
+                padding: 0.5vw;
                 text-align: right;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div id="headGrid">
             <div class="box logoBox">
                 <a href="#"><img src="images/Logo2.png" alt="Logo"></a>
             </div>
-            <!-- <div class="box memberBox">
-                <nav id="memberNav">
-                    <ul>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
-                    </ul>
-                </nav>
-            </div> -->
             <div class="box navBox">
-                <nav id="menuNav">
+                <nav class="menuNav">
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">전기차 전력소비 예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 수입비용 예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">온실가스 배출량 예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">기후변화 영향 예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">전기차 전력</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 예산</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><span class="do-hyeon-regular">에너지 효율</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><span class="do-hyeon-regular">가뭄 홍수 발생</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                 </nav>
                 <div id="menuIcon">☰</div>
@@ -149,22 +192,29 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var menuIcon = document.getElementById('menuIcon');
-            var menuNav = document.querySelector('.navBox > #menuNav > ul');
+            var menuNav = document.querySelector('.menuNav');
+            var uls = document.querySelectorAll('.navBox > .menuNav > ul');
             var overlay = document.createElement('div');
             overlay.className = 'overlay';
             document.body.appendChild(overlay);
 
-            if (menuIcon && menuNav) {
+            if (menuIcon && uls) {
                 menuIcon.addEventListener('click', function() {
-                    menuNav.classList.toggle('show');
+                	uls.forEach(function(ul) {
+                    ul.classList.toggle('show');
+                });
                     overlay.classList.toggle('show');
                     menuIcon.classList.toggle('open');
+                    menuNav.classList.toggle('show');
                 });
 
                 overlay.addEventListener('click', function() {
-                    menuNav.classList.remove('show');
+                    uls.forEach(function(ul) {
+                        ul.classList.remove('show');
+                    });
                     overlay.classList.remove('show');
                     menuIcon.classList.remove('open');
+                    menuNav.classList.remove('show');
                 });
             }
         });
