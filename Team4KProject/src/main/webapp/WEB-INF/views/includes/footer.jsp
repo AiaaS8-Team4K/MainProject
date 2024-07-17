@@ -27,6 +27,11 @@
             margin-top: 2rem;
             border-top-left-radius: 40%;
             border-top-right-radius: 40%;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
         }
         .container {
             width: 90%;
