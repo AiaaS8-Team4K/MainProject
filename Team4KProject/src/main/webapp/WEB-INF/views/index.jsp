@@ -3,16 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.css" integrity="sha512-earFJuyxuk1UIfnUubV3DGk2ysSejjmhMPb/4OXsqII9qmIbEwa1AaXrTqo4ivYizpbfyjXFZi6wENs94/BKWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.extensions.min.js" integrity="sha512-CG4suntOelKyziz99VyC3BrbQ60IOtpJ9RYQvI/0d6TdYWStN69gCb9OpPMlym+3OmNAr357Kv6FVqTk25Ej5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Team4K 메인화면</title>
 	<link rel="stylesheet" href="css/index.css">
-	<script type="text/javascript" src="js/index.js" ></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<jsp:include page ="./includes/header.jsp" flush="true"/>
+	<div id="fullpage">
     <main class="main-content">
-        <section class="hero">
+        <div class="section hero">
     		<div class="carousel">
         		<img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
         		<a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="예산 지킴이" dataText2="두번째 텍스트"></a>
@@ -28,57 +33,93 @@
         			<button class="next">&#10095;</button>
     			</div>
     		</div>
-        </section>
-        <section class="philosophy">
+        </div>
+        <div class="section philosophy">
             <div class="container">
-                <h2>Philosophy</h2>
+                <h2>기획의도</h2> <!-- philosophy -->
                 <div class="philosophy-items">
                     <div class="item">
-                        <img src="images/mq1280.jpg" alt="고객중심">
-                        <h3>고객중심</h3>
-                        <p>최고의 가치를 제공합니다.</p>
+                        <h3>에너지 안보</h3>
+                        <p>위협 받는 국내 에너지 안보</p>
                     </div>
                     <div class="item">
-                        <img src="images/mq1280.jpg" alt="최고의 품질">
-                        <h3>최고의 품질</h3>
-                        <p>믿을 수 있는 제품입니다.</p>
+                        <h3>에너지 소비량</h3>
+                        <p>국내 에너지 소비량의 꾸준한 증가</p>
                     </div>
                     <div class="item">
-                        <img src="images/mq1280.jpg" alt="신속한 대응">
-                        <h3>신속한 대응</h3>
-                        <p>신속하게 대응합니다.</p>
+                        <h3>전기차 보급률</h3>
+                        <p>전기차 보급으로 전력 수요 증가</p>
+                    </div> 
+                    <div class="item">
+                        <h3>이상기후현상 증가</h3>
+                        <p>온실가스로 인한 기후현상의 양극화</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="history">
+        </div>
+        <div class="section history">
             <div class="container">
-                <h2>History</h2>
+                <h2>서비스 소개</h2> <!-- history -->
                 <div class="history-items">
-                    <div class="item">
-                        <h3>2020 ~ 2009</h3>
-                        <p>2020: ~ 내용</p>
+                   <div class="item">
+                        <img src="images/mq1280.jpg" alt="예측 서비스 기능">
+                        <h3>예측 서비스 기능</h3>
+                        <p>"	"</p>
                     </div>
                     <div class="item">
-                        <h3>2009 ~ 2001</h3>
-                        <p>2009: ~ 내용</p>
+                        <img src="images/mq1280.jpg" alt="분석 서비스 기능">
+                        <h3>분석 서비스 기능</h3>
+                        <p>"	"</p>
                     </div>
                     <div class="item">
-                        <h3>1990's</h3>
-                        <p>1996: ~ 내용</p>
+                        <img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">
+                        <h3>레퍼런스 데이터 소개</h3>
+                        <p>참고한 db를 제공합니다.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="partners">
+        </div>
+		<div class="section effect"> <!-- effect -->
+		    <div class="container">
+		        <h2>기대효과</h2>
+		        <div class="effect-items">
+				<div class="item">
+				    <div class="img-container">
+				        <img src="images/mq1280.jpg" alt="기대효과 이미지 1">
+				        <h3>에너지<br>안보<br>강화</h3>
+				        <div class="icon">
+				            <img src="images/energyIcon.png" alt="아이콘">
+				        </div>
+
+				    </div>
+				</div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 2">
+		                    <h3>효율적인<br>비용<br>집행</h3>
+		                    <div class="icon">
+				            <img src="images/moneyIcon.png" alt="아이콘">
+				        </div>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 3">
+		                    <h3>효과 3</h3>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 4">
+		                    <h3>효과 4</h3>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+        <div class="section location">
             <div class="container">
-                <h2>Our Partner</h2>
-                <img src="images/mq1280.jpg" alt="세계 지도">
-            </div>
-        </section>
-        <section class="location">
-            <div class="container">
-                <h2>Location</h2>
+                <h2>팀원 소개</h2>
                 <div class="location-items">
                     <div class="item">
                         <img src="images/mq1280.jpg" alt="유안 공장">
@@ -92,8 +133,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
+    </div>
+    </main>
+    </div>
 	<jsp:include page ="./includes/footer.jsp" flush="true"/>
 </body>
 </html>

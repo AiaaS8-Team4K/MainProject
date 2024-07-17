@@ -5,40 +5,90 @@
 <meta charset="UTF-8">
 <title>Footer</title>
     <style>
-        body {
-            font-size: calc(3px + 1vw);
-            padding: 0;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: calc(24px + 1vw);
-        }
-        h2 {
-            font-size: calc(20px + 0.8vw);
-        }
-        p {
-            font-size: calc(14px + 0.3vw);
-        }
         .footer {
             background: #333;
             color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-            border-top-left-radius: 40%;
-            border-top-right-radius: 40%;
+            padding: 0;
+            margin: 0;
+            border-top-left-radius: 2vw;
+            border-top-right-radius: 2vw;
+    		bottom: 0;
+    		position: fixed;
+    		z-index: 998;
+    		width: 100vw;
+    		height: 3vh;
+            transition: height 0.3s ease;
+            overflow: hidden;
         }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
+        
+        .footer:hover {
+            height: 15vh;
         }
+        .footer-default-content {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transition: transform 0.3s ease; /* 글씨 이동에 대한 트랜지션*/
+            color: #A6A6A6;
+            text-align:center;
+        }
+        /* .footer:hover .footer-default-content {
+            transform: translateY(-1vh); /* 화면 확대시 글씨도 위로 이동 //픽셀단위수정*/
+        } */
+        
+        .footerNav{
+        width: 100%;
+        display : flex;
+        justify-content: space-around;
+        }
+        
+        .footerNav > ul{
+            font-size: calc( 0.5vw + 0.5vh );
+            list-style: none;
+            display: inline-flex;
+            flex-direction: column;
+            width: 20%;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+        .footer a{
+        	text-decoration: none;
+        	color: white;
+       	}
+       	.fCopyRight p{
+       		width:100vw;
+    		font-size: calc( 0.7vw + 0.7vh );
+    		margin: 0 0 1vh;
+       	}
     </style>
 </head>
 <body>
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 HiFil Tech Inc. All rights reserved.</p>
+        <div class="footer-default-content">
+            <div class="fCopyRight"><p>&copy; 2024 AiaaS8 Team4K. All rights reserved.</p></div>
+            <div class="footerNav">
+        	<ul>
+        		<li><a href="#">메뉴 1-1</a></li>
+        		<li><a href="#">메뉴 1-2</a></li>
+        		<li><a href="#">메뉴 1-3</a></li>
+        	</ul>
+        	<ul>
+        		<li><a href="#">메뉴 2-1</a></li>
+        		<li><a href="#">메뉴 2-2</a></li>
+        		<li><a href="#">메뉴 2-3</a></li>
+        	</ul>
+        	<ul>
+        		<li><a href="#">메뉴 3-1</a></li>
+        		<li><a href="#">메뉴 3-2</a></li>
+        		<li><a href="#">메뉴 3-3</a></li>
+        	</ul>
+        	<ul>
+        		<li><a href="#">메뉴 4-1</a></li>
+        		<li><a href="#">메뉴 4-2</a></li>
+        		<li><a href="#">메뉴 4-3</a></li>
+        	</ul>
+        	</div>
         </div>
     </footer>
 </body>
