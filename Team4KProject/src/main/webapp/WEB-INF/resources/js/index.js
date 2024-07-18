@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation: true,
     navigationPosition: 'right',
     controlArrows: false,
-    anchors: ['hero', 'philosophy', 'history', 'partners', 'location'],
+    anchors: ['hero', 'intention', 'introduce', 'effect', 'teamMember'],
     verticalCentered: true,  // 섹션 내용을 수직 중앙 정렬
     scrollOverflow: false,
     fitToSection: false,
