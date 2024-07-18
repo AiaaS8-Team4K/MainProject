@@ -45,10 +45,13 @@ body img {
 }
 
 .carousel {
-    margin: 0 auto;
+	top: 1vh;
+	margin: 0 auto;
     width: 95vw;
-    height: 85vh;
+    height: 87vh;
     position: relative;
+    display:flex;
+    justify-content: center;
 }
 
 .carousel img {
@@ -69,9 +72,10 @@ body img {
 }
 
 .carousel-buttons {
-    position: absolute;
+    position: relative;
     top: 50%;
-    width: 100%;
+    width: 96%;
+    height: 7%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
@@ -83,16 +87,8 @@ body img {
     color: white;
     border: none;
     padding: 10px;
-    font-size: 18px;
+    font-size: calc( 1vw + 1vh );
     cursor: pointer;
-}
-
-.carousel-buttons .prev {
-    left: 10px;
-}
-
-.carousel-buttons .next {
-    right: 10px;
 }
 
 .section {
@@ -102,13 +98,6 @@ body img {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-}
-
-.fp-overflow {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
 }
 
 .hero .hero-text {
@@ -141,10 +130,10 @@ body img {
 }
 
 .introduce .item img {
-    border-radius: 50%; /* ÀÌ¹ÌÁö¸¦ ¿øÇüÀ¸·Î */
+    border-radius: 50%; /* ì´ë¯¸ì§€ë¥¼ ì›í˜•ìœ¼ë¡œ */
     width: 400px;
     height: 400px;
-    object-fit: cover; /* ÀÌ¹ÌÁö°¡ ÄÁÅ×ÀÌ³Ê¿¡ ¸Â°Ô Á¶Á¤ */
+    object-fit: cover; /* ì´ë¯¸ì§€ê°€ ì»¨í…Œì´ë„ˆì— ë§ê²Œ ì¡°ì • */
 }
 
 .effect img, .philosophy img, .introduce img, .teamMember img {
@@ -158,23 +147,23 @@ body img {
 }
 
 .effect .item img {
-    height: 750px; /* img Å©±â Á¶Á¤ */
+    height: 750px; /* img í¬ê¸° ì¡°ì • */
     width: 100%;
-    transition: opacity 0.5s ease-in-out; /* ÀüÈ¯ È¿°ú Ãß°¡ */
+    transition: opacity 0.5s ease-in-out; /* ì „í™˜ íš¨ê³¼ ì¶”ê°€ */
 }
 
 .effect .item {
-    margin-right: 0.7rem; /* °¢ item »çÀÌ¿¡ °£°İ Ãß°¡ */
-    position: relative; /* ÀÚ½Ä ¿ä¼ÒÀÇ Àı´ë À§Ä¡¸¦ ¼³Á¤ÇÒ ¼ö ÀÖµµ·Ï ÇÔ */
+    margin-right: 0.7rem; /* ê° item ì‚¬ì´ì— ê°„ê²© ì¶”ê°€ */
+    position: relative; /* ìì‹ ìš”ì†Œì˜ ì ˆëŒ€ ìœ„ì¹˜ë¥¼ ì„¤ì •í•  ìˆ˜ ìˆë„ë¡ í•¨ */
 }
 
 .effect .item:hover img {
-    opacity: 0.7; /* È£¹ö ½Ã ÆäÀÌµå È¿°ú */
+    opacity: 0.7; /* í˜¸ë²„ ì‹œ í˜ì´ë“œ íš¨ê³¼ */
 }
 
 .effect h2 {
-    margin-top: 0; /* Á¦¸ñÀÇ À§Ä¡ Á¶Á¤ */
-    text-align: center; /* Á¦¸ñ Áß¾Ó Á¤·Ä */
+    margin-top: 0; /* ì œëª©ì˜ ìœ„ì¹˜ ì¡°ì • */
+    text-align: center; /* ì œëª© ì¤‘ì•™ ì •ë ¬ */
 }
 
 .img-container {
@@ -188,40 +177,40 @@ body img {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ÅØ½ºÆ® ±×¸²ÀÚ È¿°ú */
-    opacity: 0; /* ±âº» »óÅÂ¿¡¼­´Â ÅØ½ºÆ®¿Í ¾ÆÀÌÄÜÀ» ¼û±è */
-    transition: opacity 0.5s ease-in-out; /* ÀüÈ¯ È¿°ú Ãß°¡ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* í…ìŠ¤íŠ¸ ê·¸ë¦¼ì íš¨ê³¼ */
+    opacity: 0; /* ê¸°ë³¸ ìƒíƒœì—ì„œëŠ” í…ìŠ¤íŠ¸ì™€ ì•„ì´ì½˜ì„ ìˆ¨ê¹€ */
+    transition: opacity 0.5s ease-in-out; /* ì „í™˜ íš¨ê³¼ ì¶”ê°€ */
 }
 
 .img-container .icon {
-    top: 60%; /* ¾ÆÀÌÄÜÀÇ À§Ä¡¸¦ ÅØ½ºÆ®¿Í ´Ù¸£°Ô Á¶Á¤ÇÒ ¼ö ÀÖÀ½ */
+    top: 60%; /* ì•„ì´ì½˜ì˜ ìœ„ì¹˜ë¥¼ í…ìŠ¤íŠ¸ì™€ ë‹¤ë¥´ê²Œ ì¡°ì •í•  ìˆ˜ ìˆìŒ */
 }
 
 .img-container .icon img {
-    max-width: 100%; /* ¾ÆÀÌÄÜÀÇ ³Êºñ°¡ ÄÁÅ×ÀÌ³Ê¸¦ ³ÑÁö ¾Êµµ·Ï ¼³Á¤ */
-    height: auto; /* ºñÀ²À» À¯ÁöÇÏ¸é¼­ ³ôÀÌ ÀÚµ¿ Á¶Á¤ */
+    max-width: 100%; /* ì•„ì´ì½˜ì˜ ë„ˆë¹„ê°€ ì»¨í…Œì´ë„ˆë¥¼ ë„˜ì§€ ì•Šë„ë¡ ì„¤ì • */
+    height: auto; /* ë¹„ìœ¨ì„ ìœ ì§€í•˜ë©´ì„œ ë†’ì´ ìë™ ì¡°ì • */
 }
 
 .img-container:hover h3, .img-container:hover .icon {
-    opacity: 1; /* È£¹ö ½Ã ÅØ½ºÆ®¿Í ¾ÆÀÌÄÜÀ» Ç¥½Ã */
+    opacity: 1; /* í˜¸ë²„ ì‹œ í…ìŠ¤íŠ¸ì™€ ì•„ì´ì½˜ì„ í‘œì‹œ */
 }
 
-.location {
+.teamMember {
     border-radius: 15px;
     background-color: #EAEAEA;
 }
 
 .intention .intention-items {
     display: flex;
-    flex-direction: column; /* ¼¼·Î·Î ³ª¿­ */
+    flex-direction: column; /* ì„¸ë¡œë¡œ ë‚˜ì—´ */
     align-items: center;
-    gap: 1rem; /* Ç×¸ñ °£ °£°İ Ãß°¡ */
+    gap: 1rem; /* í•­ëª© ê°„ ê°„ê²© ì¶”ê°€ */
 }
 
 .intention .item {
     text-align: center;
-    width: 100%; /* ÀüÃ¼ ³Êºñ */
-    max-width: 600px; /* ÃÖ´ë ³Êºñ ¼³Á¤ */
+    width: 100%; /* ì „ì²´ ë„ˆë¹„ */
+    max-width: 600px; /* ìµœëŒ€ ë„ˆë¹„ ì„¤ì • */
     padding: 1rem;
     border: 1px solid #333;
     border-radius: 8px;
