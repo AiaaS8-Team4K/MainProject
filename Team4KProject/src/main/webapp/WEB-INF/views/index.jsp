@@ -27,39 +27,16 @@
                 	<h1>Abundant energy makes a light heart.</h1>
                 	<h3>에너지 안보 지킴이 서비스</h3>
             	</div>
-            <!-- <img src="/htmlEdu/layout/images/mq1920.jpg" alt="Hero Image"> -->
     			<div class="carousel-buttons">
         			<button class="prev">&#10094;</button>
         			<button class="next">&#10095;</button>
     			</div>
     		</div>
         </div>
-        <div class="section philosophy">
+        <div class="section intention">
             <div class="container">
-                <h2>Philosophy</h2>
-                <div class="philosophy-items">
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="고객중심">
-                        <h3>고객중심</h3>
-                        <p>최고의 가치를 제공합니다.</p>
-                    </div>
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="최고의 품질">
-                        <h3>최고의 품질</h3>
-                        <p>믿을 수 있는 제품입니다.</p>
-                    </div>
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="신속한 대응">
-                        <h3>신속한 대응</h3>
-                        <p>신속하게 대응합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section history">
-            <div class="container">
-                <h2>History</h2>
-                <div class="history-items">
+                <h2>기획의도</h2>
+                <div class="intention-items">
                     <div class="item">
                         <h3>2020 ~ 2009</h3>
                         <p>2020: ~ 내용</p>
@@ -75,16 +52,63 @@
                 </div>
             </div>
         </div>
-        <div class="section partners">
+        <div class="section introduce">
             <div class="container">
-                <h2>Our Partner</h2>
-                <img src="images/mq1280.jpg" alt="세계 지도">
+                <h2>서비스 소개</h2>
+                <div class="introduce-items">
+                    <div class="item">
+                        <img src="images/mq1280.jpg" alt="예측 서비스 기능">
+                        <h3>예측 서비스 기능</h3>
+                    </div>
+                    <div class="item">
+                        <img src="images/mq1280.jpg" alt="분석 서비스 기능">
+                        <h3>분석 서비스 기능</h3>
+                    </div>
+                    <div class="item">
+                        <img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">
+                        <h3>레퍼런스 데이터 소개</h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="section location">
+        <div class="section effect">
             <div class="container">
-                <h2>Location</h2>
-                <div class="location-items">
+                <h2>기대효과</h2>
+		        <div class="effect-items">
+				<div class="item">
+				    <div class="img-container">
+				        <img src="images/mq1280.jpg" alt="기대효과 이미지 1">
+				        <h3>에너지<br>안보<br>강화</h3>
+				        <div class="icon">
+				            <img src="images/moneyIcon.png" alt="아이콘">
+				        </div>
+				    </div>
+				</div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 2">
+		                    <h3>효율적인<br>비용<br>집행</h3>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 3">
+		                    <h3>효과 3</h3>
+		                </div>
+		            </div>
+		            <div class="item">
+		                <div class="img-container">
+		                    <img src="images/mq1280.jpg" alt="기대효과 이미지 4">
+		                    <h3>효과 4</h3>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+        <div class="section teamMember">
+            <div class="container">
+                <h2>팀원 소개</h2>
+                <div class="teamMember-items">
                     <div class="item">
                         <img src="images/mq1280.jpg" alt="유안 공장">
                         <h3>유안 공장</h3>
