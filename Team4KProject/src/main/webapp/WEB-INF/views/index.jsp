@@ -84,7 +84,7 @@
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 1">
                             <h3>에너지<br>안보<br>강화</h3>
                             <div class="icon">
-                                <img src="images/moneyIcon.png" alt="아이콘">
+                                <img src="images/energyIcon.png" alt="아이콘">
                             </div>
                         </div>
                     </div>
@@ -92,6 +92,9 @@
                         <div class="img-container">
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 2">
                             <h3>효율적인<br>비용<br>집행</h3>
+                            <div class="icon">
+                                <img src="images/moneyIcon.png" alt="아이콘">
+                            </div>
                         </div>
                     </div>
                     <div class="item">
