@@ -1,24 +1,25 @@
 html {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-	font-size: calc(14px + 0.5vw);
-	font-family: 'Arial', sans-serif;
-	line-height: 1.6;
-	color: #333;
+    font-size: calc(14px + 0.5vw);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 h1 {
-	font-size: calc(24px + 1vw);
+    font-size: calc(24px + 1vw);
 }
 
 h2 {
-	font-size: calc(20px + 0.8vw);
+    font-size: calc(20px + 0.8vw);
+    text-align: center;
 }
 
 p {
-	font-size: calc(14px + 0.3vw);
+    font-size: calc(14px + 0.3vw);
 }
 
 body img {
@@ -28,19 +29,19 @@ body img {
 }
 
 .container {
-	width: 90vw;
-	max-height: 80vh;
+    width: 90vw;
+    max-height: 80vh;
 }
 
 .container .nav {
-	float: right;
+    float: right;
 }
 
 .hero {
-	position: relative;
-	text-align: center;
-	align-items: center;
-	overflow: hidden;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .carousel {
@@ -66,7 +67,7 @@ body img {
 }
 
 .carousel img.active {
-	z-index: 1;
+    z-index: 1;
     opacity: 1;
 }
 
@@ -100,35 +101,32 @@ body img {
 }
 
 .hero .hero-text {
-	position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	color: #fff;
-	z-index: 2;
-	text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
 }
 
 .intention, .introduce, .effect, .teamMember {
-	padding: 3rem 0;
+    padding: 3rem 0;
 }
 
-.intention .intention-items, .introduce .introduce-items, .effect .effect-items, .teamMember .teamMember-items
-	{
-	display: flex;
-	justify-content: space-around;
+.intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+    display: flex;
+    justify-content: space-around;
 }
 
-.intention .item, .introduce .item, .effect .item, .teamMember.item {
-	text-align: center;
-	width: 30%;
+.intention .item, .introduce .item, .teamMember .item, .effect .item {
+    text-align: center;
+    width: 30%;
 }
 
 .introduce {
-	border-radius: 15%;
+    border-radius: 15%;
     background-color: #EAEAEA;
-	/* color: white; */
-	/* background-color: #010950; */
 }
 
 .introduce .item img {
@@ -138,7 +136,7 @@ body img {
     object-fit: cover; /* 이미지가 컨테이너에 맞게 조정 */
 }
 
-.effect img, .intention img, .introduce img, .teamMember img {
+.effect img, .philosophy img, .introduce img, .teamMember img {
     height: 50%;
     object-fit: cover;
 }
@@ -188,10 +186,9 @@ body img {
     top: 60%; /* 아이콘의 위치를 텍스트와 다르게 조정할 수 있음 */
 }
 
-
 .img-container .icon img {
-  	max-width: 100%; /* 아이콘의 너비가 컨테이너를 넘지 않도록*/
-    height: auto; 
+    max-width: 100%; /* 아이콘의 너비가 컨테이너를 넘지 않도록 설정 */
+    height: auto; /* 비율을 유지하면서 높이 자동 조정 */
 }
 
 .img-container:hover h3, .img-container:hover .icon {
@@ -220,48 +217,45 @@ body img {
 }
 
 /* Responsive */
-@media ( max-width : 1220px) {
-	.container {
-		width: 95%;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-		align-items: center;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 80%;
-		margin-bottom: 2rem;
-	}
+@media (max-width: 1220px) {
+    .container {
+        width: 95%;
+    }
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
 }
 
-@media ( max-width : 768px) {
-	.header .nav ul {
-		flex-direction: column;
-		align-items: center;
-	}
-	.hero video {
-		height: 70vh;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 100%;
-	}
+@media (max-width: 768px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    }
 }
 
-@media ( max-width : 480px) {
-	.header .nav ul {
-		flex-direction: column;
-		align-items: center;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 100%;
-	}
+@media (max-width: 480px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    }
 }
