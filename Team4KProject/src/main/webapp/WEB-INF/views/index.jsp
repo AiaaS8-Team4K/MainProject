@@ -32,10 +32,10 @@
                 </div>
             </div>
         </div>
-        <div class="section philosophy">
+        <div class="section intention">
             <div class="container">
                 <h2>기획의도</h2>
-                <div class="philosophy-items">
+                <div class="intention-items">
                     <div class="item">
                         <h3>에너지 안보</h3>
                         <p>지속 가능한 에너지 안보</p>
@@ -55,10 +55,10 @@
                 </div>
             </div>
         </div>
-        <div class="section history">
+        <div class="section introduce">
             <div class="container">
                 <h2>서비스 소개</h2>
-                <div class="history-items">
+                <div class="introduce-items">
                    <div class="item">
                         <img src="images/mq1280.jpg" alt="예측 서비스 기능">
                         <h3>예측 서비스 기능</h3>
@@ -109,10 +109,10 @@
                 </div>
             </div>
         </div>
-        <div class="section location">
+        <div class="section teamMember">
             <div class="container">
                 <h2>팀원 소개</h2>
-                <div class="location-items">
+                <div class="teamMember-items">
                     <div class="item">
                         <img src="images/mq1280.jpg" alt="유안 공장">
                         <h3>유안 공장</h3>

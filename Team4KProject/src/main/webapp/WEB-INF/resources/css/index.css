@@ -121,33 +121,33 @@ body img {
     text-align: center;
 }
 
-.philosophy, .history, .effect, .location {
+.intention, .introduce, .effect, .teamMember {
     padding: 3rem 0;
 }
 
-.philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+.intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
     display: flex;
     justify-content: space-around;
 }
 
-.philosophy .item, .history .item, .location .item, .effect .item {
+.intention .item, .introduce .item, .teamMember .item, .effect .item {
     text-align: center;
     width: 30%;
 }
 
-.history {
+.introduce {
     border-radius: 15px;
     background-color: #EAEAEA;
 }
 
-.history .item img {
+.introduce .item img {
     border-radius: 50%; /* 이미지를 원형으로 */
     width: 400px;
     height: 400px;
     object-fit: cover; /* 이미지가 컨테이너에 맞게 조정 */
 }
 
-.effect img, .philosophy img, .history img, .location img {
+.effect img, .philosophy img, .introduce img, .teamMember img {
     height: 50%;
     object-fit: cover;
 }
@@ -211,14 +211,14 @@ body img {
     background-color: #EAEAEA;
 }
 
-.philosophy .philosophy-items {
+.intention .intention-items {
     display: flex;
     flex-direction: column; /* 세로로 나열 */
     align-items: center;
     gap: 1rem; /* 항목 간 간격 추가 */
 }
 
-.philosophy .item {
+.intention .item {
     text-align: center;
     width: 100%; /* 전체 너비 */
     max-width: 600px; /* 최대 너비 설정 */
@@ -232,11 +232,11 @@ body img {
     .container {
         width: 95%;
     }
-    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
         align-items: center;
     }
-    .philosophy .item, .history .item, .location .item, .effect .item {
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
         width: 80%;
         margin-bottom: 2rem;
     }
@@ -250,10 +250,10 @@ body img {
     .hero video {
         height: 70vh;
     }
-    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
     }
-    .philosophy .item, .history .item, .location .item, .effect .item {
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
         width: 100%;
     }
 }
@@ -263,10 +263,10 @@ body img {
         flex-direction: column;
         align-items: center;
     }
-    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
     }
-    .philosophy .item, .history .item, .location .item, .effect .item {
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
         width: 100%;
     }
 }
