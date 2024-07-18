@@ -1,24 +1,25 @@
 html {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-	font-size: calc(14px + 0.5vw);
-	font-family: 'Arial', sans-serif;
-	line-height: 1.6;
-	color: #333;
+    font-size: calc(14px + 0.5vw);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 h1 {
-	font-size: calc(24px + 1vw);
+    font-size: calc(24px + 1vw);
 }
 
 h2 {
-	font-size: calc(20px + 0.8vw);
+    font-size: calc(20px + 0.8vw);
+    text-align: center;
 }
 
 p {
-	font-size: calc(14px + 0.3vw);
+    font-size: calc(14px + 0.3vw);
 }
 
 body img {
@@ -28,29 +29,26 @@ body img {
 }
 
 .container {
-	width: 90vw;
-	max-height: 80vh;
+    width: 90vw;
+    max-height: 80vh;
 }
 
 .container .nav {
-	float: right;
+    float: right;
 }
 
 .hero {
-	position: relative;
-	text-align: center;
-	align-items: center;
-	overflow: hidden;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .carousel {
-	top: 1vh;
-	margin: 0 auto;
+    margin: 0 auto;
     width: 95vw;
-    height: 87vh;
+    height: 85vh;
     position: relative;
-    display:flex;
-    justify-content: center;
 }
 
 .carousel img {
@@ -66,15 +64,14 @@ body img {
 }
 
 .carousel img.active {
-	z-index: 1;
+    z-index: 1;
     opacity: 1;
 }
 
 .carousel-buttons {
-    position: relative;
+    position: absolute;
     top: 50%;
-    width: 96%;
-    height: 7%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
@@ -86,8 +83,16 @@ body img {
     color: white;
     border: none;
     padding: 10px;
-    font-size: calc( 1vw + 1vh );
+    font-size: 18px;
     cursor: pointer;
+}
+
+.carousel-buttons .prev {
+    left: 10px;
+}
+
+.carousel-buttons .next {
+    right: 10px;
 }
 
 .section {
@@ -99,46 +104,50 @@ body img {
     overflow: hidden;
 }
 
+.fp-overflow {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero .hero-text {
-	position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	color: #fff;
-	z-index: 2;
-	text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
 }
 
-.intention, .introduce, .effect, .teamMember {
-	padding: 3rem 0;
+.philosophy, .history, .effect, .location {
+    padding: 3rem 0;
 }
 
-.intention .intention-items, .introduce .introduce-items, .effect .effect-items, .teamMember .teamMember-items
-	{
-	display: flex;
-	justify-content: space-around;
+.philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+    display: flex;
+    justify-content: space-around;
 }
 
-.intention .item, .introduce .item, .effect .item, .teamMember.item {
-	text-align: center;
-	width: 30%;
+.philosophy .item, .history .item, .location .item, .effect .item {
+    text-align: center;
+    width: 30%;
 }
 
-.introduce {
-	border-radius: 15%;
+.history {
+    border-radius: 15px;
     background-color: #EAEAEA;
-	/* color: white; */
-	/* background-color: #010950; */
 }
 
-.introduce .item img {
-    border-radius: 50%; /* ì´ë¯¸ì§€ë¥¼ ì›í˜•ìœ¼ë¡œ */
+.history .item img {
+    border-radius: 50%; /* ÀÌ¹ÌÁö¸¦ ¿øÇüÀ¸·Î */
     width: 400px;
     height: 400px;
-    object-fit: cover; /* ì´ë¯¸ì§€ê°€ ì»¨í…Œì´ë„ˆì— ë§ê²Œ ì¡°ì • */
+    object-fit: cover; /* ÀÌ¹ÌÁö°¡ ÄÁÅ×ÀÌ³Ê¿¡ ¸Â°Ô Á¶Á¤ */
 }
 
-.effect img, .intention img, .introduce img, .teamMember img {
+.effect img, .philosophy img, .history img, .location img {
     height: 50%;
     object-fit: cover;
 }
@@ -149,23 +158,23 @@ body img {
 }
 
 .effect .item img {
-    height: 750px; /* img í¬ê¸° ì¡°ì • */
+    height: 750px; /* img Å©±â Á¶Á¤ */
     width: 100%;
-    transition: opacity 0.5s ease-in-out; /* ì „í™˜ íš¨ê³¼ ì¶”ê°€ */
+    transition: opacity 0.5s ease-in-out; /* ÀüÈ¯ È¿°ú Ãß°¡ */
 }
 
 .effect .item {
-    margin-right: 0.7rem; /* ê° item ì‚¬ì´ì— ê°„ê²© ì¶”ê°€ */
-    position: relative; /* ìì‹ ìš”ì†Œì˜ ì ˆëŒ€ ìœ„ì¹˜ë¥¼ ì„¤ì •í•  ìˆ˜ ìˆë„ë¡ í•¨ */
+    margin-right: 0.7rem; /* °¢ item »çÀÌ¿¡ °£°İ Ãß°¡ */
+    position: relative; /* ÀÚ½Ä ¿ä¼ÒÀÇ Àı´ë À§Ä¡¸¦ ¼³Á¤ÇÒ ¼ö ÀÖµµ·Ï ÇÔ */
 }
 
 .effect .item:hover img {
-    opacity: 0.7; /* í˜¸ë²„ ì‹œ í˜ì´ë“œ íš¨ê³¼ */
+    opacity: 0.7; /* È£¹ö ½Ã ÆäÀÌµå È¿°ú */
 }
 
 .effect h2 {
-    margin-top: 0; /* ì œëª©ì˜ ìœ„ì¹˜ ì¡°ì • */
-    text-align: center; /* ì œëª© ì¤‘ì•™ ì •ë ¬ */
+    margin-top: 0; /* Á¦¸ñÀÇ À§Ä¡ Á¶Á¤ */
+    text-align: center; /* Á¦¸ñ Áß¾Ó Á¤·Ä */
 }
 
 .img-container {
@@ -179,89 +188,85 @@ body img {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* í…ìŠ¤íŠ¸ ê·¸ë¦¼ì íš¨ê³¼ */
-    opacity: 0; /* ê¸°ë³¸ ìƒíƒœì—ì„œëŠ” í…ìŠ¤íŠ¸ì™€ ì•„ì´ì½˜ì„ ìˆ¨ê¹€ */
-    transition: opacity 0.5s ease-in-out; /* ì „í™˜ íš¨ê³¼ ì¶”ê°€ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ÅØ½ºÆ® ±×¸²ÀÚ È¿°ú */
+    opacity: 0; /* ±âº» »óÅÂ¿¡¼­´Â ÅØ½ºÆ®¿Í ¾ÆÀÌÄÜÀ» ¼û±è */
+    transition: opacity 0.5s ease-in-out; /* ÀüÈ¯ È¿°ú Ãß°¡ */
 }
 
 .img-container .icon {
-    top: 60%; /* ì•„ì´ì½˜ì˜ ìœ„ì¹˜ë¥¼ í…ìŠ¤íŠ¸ì™€ ë‹¤ë¥´ê²Œ ì¡°ì •í•  ìˆ˜ ìˆìŒ */
+    top: 60%; /* ¾ÆÀÌÄÜÀÇ À§Ä¡¸¦ ÅØ½ºÆ®¿Í ´Ù¸£°Ô Á¶Á¤ÇÒ ¼ö ÀÖÀ½ */
 }
 
-
 .img-container .icon img {
-  	max-width: 100%; /* ì•„ì´ì½˜ì˜ ë„ˆë¹„ê°€ ì»¨í…Œì´ë„ˆë¥¼ ë„˜ì§€ ì•Šë„ë¡*/
-    height: auto; 
+    max-width: 100%; /* ¾ÆÀÌÄÜÀÇ ³Êºñ°¡ ÄÁÅ×ÀÌ³Ê¸¦ ³ÑÁö ¾Êµµ·Ï ¼³Á¤ */
+    height: auto; /* ºñÀ²À» À¯ÁöÇÏ¸é¼­ ³ôÀÌ ÀÚµ¿ Á¶Á¤ */
 }
 
 .img-container:hover h3, .img-container:hover .icon {
-    opacity: 1; /* í˜¸ë²„ ì‹œ í…ìŠ¤íŠ¸ì™€ ì•„ì´ì½˜ì„ í‘œì‹œ */
+    opacity: 1; /* È£¹ö ½Ã ÅØ½ºÆ®¿Í ¾ÆÀÌÄÜÀ» Ç¥½Ã */
 }
 
-.teamMember {
+.location {
     border-radius: 15px;
     background-color: #EAEAEA;
 }
 
-.intention .intention-items {
+.philosophy .philosophy-items {
     display: flex;
-    flex-direction: column; /* ì„¸ë¡œë¡œ ë‚˜ì—´ */
+    flex-direction: column; /* ¼¼·Î·Î ³ª¿­ */
     align-items: center;
-    gap: 1rem; /* í•­ëª© ê°„ ê°„ê²© ì¶”ê°€ */
+    gap: 1rem; /* Ç×¸ñ °£ °£°İ Ãß°¡ */
 }
 
-.intention .item {
+.philosophy .item {
     text-align: center;
-    width: 100%; /* ì „ì²´ ë„ˆë¹„ */
-    max-width: 600px; /* ìµœëŒ€ ë„ˆë¹„ ì„¤ì • */
+    width: 100%; /* ÀüÃ¼ ³Êºñ */
+    max-width: 600px; /* ÃÖ´ë ³Êºñ ¼³Á¤ */
     padding: 1rem;
     border: 1px solid #333;
     border-radius: 8px;
 }
 
 /* Responsive */
-@media ( max-width : 1220px) {
-	.container {
-		width: 95%;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-		align-items: center;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 80%;
-		margin-bottom: 2rem;
-	}
+@media (max-width: 1220px) {
+    .container {
+        width: 95%;
+    }
+    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .philosophy .item, .history .item, .location .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
 }
 
-@media ( max-width : 768px) {
-	.header .nav ul {
-		flex-direction: column;
-		align-items: center;
-	}
-	.hero video {
-		height: 70vh;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 100%;
-	}
+@media (max-width: 768px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .philosophy .item, .history .item, .location .item, .effect .item {
+        width: 100%;
+    }
 }
 
-@media ( max-width : 480px) {
-	.header .nav ul {
-		flex-direction: column;
-		align-items: center;
-	}
-	.philosophy .philosophy-items, .history .history-items, .location .location-items
-		{
-		flex-direction: column;
-	}
-	.philosophy .item, .history .item, .location .item {
-		width: 100%;
-	}
+@media (max-width: 480px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .philosophy .philosophy-items, .history .history-items, .location .location-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .philosophy .item, .history .item, .location .item, .effect .item {
+        width: 100%;
+    }
 }
