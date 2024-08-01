@@ -155,7 +155,7 @@
     <header class="header">
         <div id="headGrid">
             <div class="box logoBox">
-                <a href="#"><img src="images/Logo2.png" alt="Logo"></a>
+                <a href="#"><img src="images/Logo3.png" alt="Logo"></a>
             </div>
             <div class="box navBox">
                 <nav class="menuNav">
@@ -166,7 +166,7 @@
                         <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 예산</span></a></li>
+                        <li><a href="${pageContext.request.contextPath}/budget"><span class="do-hyeon-regular">에너지 예산</span></a></li>
                         <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
                         <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
                         <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
