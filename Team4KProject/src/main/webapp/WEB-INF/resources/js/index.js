@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+    const allItems = document.querySelectorAll('.item');
+    allItems.forEach(item => {
+        const animation = item.dataset.animation || 'fade-up';
+        item.style.opacity = '0';
+        item.style.transform = getInitialTransform(animation);
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
     new fullpage('#fullpage', {
     licenseKey: 'gplv3-license',
     autoScrolling: true,
@@ -16,20 +24,47 @@ document.addEventListener('DOMContentLoaded', function() {
         this.setAllowScrolling(false);
         setTimeout(() => this.setAllowScrolling(true), 1000);
     },
-    onLeave: function(origin, destination, direction) {
-        // 섹션 전환 시 애니메이션 효과
-        origin.item.style.opacity = 0;
-        destination.item.style.opacity = 1;
-    },
-    afterLoad: function(origin, destination, direction) {
-        // 섹션 로드 완료 후 처리
-        destination.item.style.opacity = 1;
+    afterLoad: function(origin, destination, direction){
+        animateItems(destination.item);
+        resetItems(origin.item);
     },
         afterRender: initializeCarousel
     });
     
-	console.log("fullPage initialized");
+    function animateItems(section) {
+        const items = section.querySelectorAll('.item');
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translate(0, 0)';
+            }, index * 100);
+        });
+    }
 
+    function resetItems(section) {
+        const items = section.querySelectorAll('.item');
+        items.forEach(item => {
+            const animation = item.dataset.animation || 'fade-up';
+            item.style.opacity = '0';
+            item.style.transform = getInitialTransform(animation);
+        });
+    }
+
+    function getInitialTransform(animation) {
+        switch (animation) {
+            case 'fade-up':
+                return 'translateY(20vh)';
+            case 'fade-down':
+                return 'translateY(-20vh)';
+            case 'fade-left':
+                return 'translateX(20vw)';
+            case 'fade-right':
+                return 'translateX(-20vw)';
+            default:
+                return 'translateY(20vh)'; // 기본값은 fade-up
+        }
+    }
+	
     function initializeCarousel() {
         const carousel = document.querySelector('.carousel');
         const images = carousel.querySelectorAll('img');

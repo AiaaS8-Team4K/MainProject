@@ -37,19 +37,19 @@
             <div class="container">
                 <h2>기획의도</h2>
                 <div class="intention-items">
-                    <div class="item">
+                    <div class="item" data-animation="fade-right">
                         <h3>에너지 안보</h3>
                         <p>지속 가능한 에너지 안보</p>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <h3>에너지 소비량</h3>
                         <p>효율적인 에너지 소비량 증가</p>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-right">
                         <h3>전기차 보급률</h3>
                         <p>전기차 보급률로 인한 수요 증가</p>
                     </div> 
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <h3>이상기후현상 증가</h3>
                         <p>이상기후로 인한 기후변화의 영향</p>
                     </div>
@@ -60,15 +60,15 @@
             <div class="container">
                 <h2>서비스 소개</h2>
                 <div class="introduce-items">
-                   <div class="item">
+                   <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="예측 서비스 기능">
                         <h3>예측 서비스 기능</h3>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="분석 서비스 기능">
                         <h3>분석 서비스 기능</h3>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">
                         <h3>레퍼런스 데이터 소개</h3>
                         <p>신속하게 대응합니다.</p>
@@ -80,7 +80,7 @@
             <div class="container">
                 <h2>기대효과</h2>
                 <div class="effect-items">
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <div class="img-container">
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 1">
                             <h3>에너지<br>안보<br>강화</h3>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <div class="img-container">
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 2">
                             <h3>효율적인<br>비용<br>집행</h3>
@@ -98,13 +98,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <div class="img-container">
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 3">
                             <h3>효과 3</h3>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-left">
                         <div class="img-container">
                             <img src="images/mq1280.jpg" alt="기대효과 이미지 4">
                             <h3>효과 4</h3>
@@ -117,12 +117,12 @@
             <div class="container">
                 <h2>팀원 소개</h2>
                 <div class="teamMember-items">
-                    <div class="item">
+                    <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="유안 공장">
                         <h3>유안 공장</h3>
                         <p>주소: ~</p>
                     </div>
-                    <div class="item">
+                    <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="진천 공장">
                         <h3>진천 공장</h3>
                         <p>주소: ~</p>
