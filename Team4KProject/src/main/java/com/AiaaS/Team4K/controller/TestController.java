@@ -23,4 +23,14 @@ public class TestController {
 		}
 		return "count";
 	}
+	
+	@GetMapping("/budget")
+	public String moveBudget() {
+		return "/budget";
+	}
+
+
 }
+
+
+
