@@ -102,13 +102,14 @@ body img {
 
 .hero .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 20px; /* 화면의 하단에서 20px 떨어진 위치 */
+    left: 20px; /* 화면의 좌측에서 20px 떨어진 위치 */
     color: #fff;
     z-index: 2;
-    text-align: center;
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    padding: 10px; /* 내부 여백 */
 }
+
 
 .intention, .introduce, .effect, .teamMember {
     padding: 3rem 0;
@@ -130,10 +131,10 @@ body img {
 }
 
 .introduce .item img {
-    border-radius: 50%; /* 이미지를 원형으로 */
+    border-radius: 50%;
     width: 400px;
     height: 400px;
-    object-fit: cover; /* 이미지가 컨테이너에 맞게 조정 */
+    object-fit: cover;
 }
 
 .effect img, .philosophy img, .introduce img, .teamMember img {
@@ -147,23 +148,23 @@ body img {
 }
 
 .effect .item img {
-    height: 750px; /* img 크기 조정 */
+    height: 750px; 
     width: 100%;
-    transition: opacity 0.5s ease-in-out; /* 전환 효과 추가 */
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .effect .item {
-    margin-right: 0.7rem; /* 각 item 사이에 간격 추가 */
-    position: relative; /* 자식 요소의 절대 위치를 설정할 수 있도록 함 */
+    margin-right: 0.7rem;
+    position: relative; 
 }
 
 .effect .item:hover img {
-    opacity: 0.7; /* 호버 시 페이드 효과 */
+    opacity: 0.7; 
 }
 
 .effect h2 {
-    margin-top: 0; /* 제목의 위치 조정 */
-    text-align: center; /* 제목 중앙 정렬 */
+    margin-top: 0; 
+    text-align: center; 
 }
 
 .img-container {
@@ -177,22 +178,22 @@ body img {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 효과 */
-    opacity: 0; /* 기본 상태에서는 텍스트와 아이콘을 숨김 */
-    transition: opacity 0.5s ease-in-out; /* 전환 효과 추가 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .img-container .icon {
-    top: 60%; /* 아이콘의 위치를 텍스트와 다르게 조정할 수 있음 */
+    top: 60%;
 }
 
 .img-container .icon img {
-    max-width: 100%; /* 아이콘의 너비가 컨테이너를 넘지 않도록 설정 */
-    height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+    max-width: 100%;
+    height: auto;
 }
 
 .img-container:hover h3, .img-container:hover .icon {
-    opacity: 1; /* 호버 시 텍스트와 아이콘을 표시 */
+    opacity: 1;
 }
 
 .teamMember {
@@ -202,15 +203,15 @@ body img {
 
 .intention .intention-items {
     display: flex;
-    flex-direction: column; /* 세로로 나열 */
+    flex-direction: column;
     align-items: center;
-    gap: 1rem; /* 항목 간 간격 추가 */
+    gap: 1rem;
 }
 
 .intention .item {
     text-align: center;
-    width: 100%; /* 전체 너비 */
-    max-width: 600px; /* 최대 너비 설정 */
+    width: 100%;
+    max-width: 600px;
     padding: 1rem;
     border: 1px solid #333;
     border-radius: 8px;
