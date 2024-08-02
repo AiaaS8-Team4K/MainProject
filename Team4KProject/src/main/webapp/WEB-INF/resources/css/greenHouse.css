@@ -102,36 +102,91 @@ body img {
 
 .hero .hero-text {
     position: absolute;
-    bottom: 20px; /* �솕硫댁쓽 �븯�떒�뿉�꽌 20px �뼥�뼱吏� �쐞移� */
-    left: 20px; /* �솕硫댁쓽 醫뚯륫�뿉�꽌 20px �뼥�뼱吏� �쐞移� */
+    bottom: 20px; 
+    left: 20px; 
     color: #fff;
     z-index: 2;
-    text-align: left; /* �뀓�뒪�듃瑜� �쇊履� �젙�젹 */
-    padding: 10px; /* �궡遺� �뿬諛� */
+    text-align: left; 
+    padding: 10px; 
 }
 
+.prediction {
+    background-color: #fff; /* 초기 배경 색상 */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* 모서리를 둥글게 */
+    animation: fadeBackground 2s forwards; /* 애니메이션 적용 */
+}
 
-.intention, .introduce, .effect, .teamMember {
+@keyframes fadeBackground {
+    0% {
+    background-color: #fff;
+	}
+    100% {
+    background-color: #EAEAEA;
+	}
+}
+
+.prediction h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.prediction-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.prediction .item {
+    background-color: white; /* 각 아이템의 배경을 흰색으로 설정 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+    flex: 1;
+    min-width: 200px;
+    max-width: 45%;
+    animation: fadeIn 1s forwards; /* 아이템에 페이드 인 애니메이션 적용 */
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.prediction .item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prediction .item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.prediction, .introduce, .effect, .teamMember {
     padding: 3rem 0;
 }
 
-.intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+.prediction .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
     display: flex;
     justify-content: space-around;
 }
 
-.intention .item, .introduce .item, .teamMember .item, .effect .item {
+.prediction .item, .introduce .item, .teamMember .item, .effect .item {
     text-align: center;
     width: 30%;
 }
 
 .introduce {
-    max-width: 100%; /* 섹션의 최대 너비 설정 */
-    width: 90vw; /* 가로 너비를 늘림 */
-    margin: 0 auto; /* 중앙 정렬 */
-    padding: 0.5rem; /* 패딩 조정 */
-    border-radius: 15%; /* 모서리를 덜 둥글게 */
-    background-color: #EAEAEA; /* 배경색 */
+    border-radius: 15%;
+    background-color: #EAEAEA;
 }
 
 .introduce .item img {
@@ -205,14 +260,14 @@ body img {
     background-color: #EAEAEA;
 }
 
-.intention .intention-items {
+.prediction .intention-items {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.intention .item {
+.prediction .item {
     text-align: center;
     width: 100%;
     max-width: 600px;
@@ -226,11 +281,11 @@ body img {
     .container {
         width: 95%;
     }
-    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+    .prediction .prediction-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
         align-items: center;
     }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
         width: 80%;
         margin-bottom: 2rem;
     }
@@ -244,10 +299,10 @@ body img {
     .hero video {
         height: 70vh;
     }
-    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+    .prediction .prediction-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
     }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
         width: 100%;
     }
 }
@@ -257,10 +312,10 @@ body img {
         flex-direction: column;
         align-items: center;
     }
-    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+    .prediction .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
         flex-direction: column;
     }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
         width: 100%;
     }
 }
@@ -268,7 +323,7 @@ body img {
 .teamMember-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px; /* 팀원 간의 간격 조정 */
+    gap: 40px; /* ���썝 媛꾩쓽 媛꾧꺽 議곗젙 */
     justify-items: center;
     align-items: center;
 }
@@ -278,8 +333,8 @@ body img {
 }
 
 .teamMember-items .item img {
-    width: 300px; /* 이미지 크기 조정 */
-    height: 300px; /* 이미지 크기 조정 */
+    width: 300px; /* �씠誘몄� �겕湲� 議곗젙 */
+    height: 300px; /* �씠誘몄� �겕湲� 議곗젙 */
     object-fit: cover;
     border-radius: 50%;
 }

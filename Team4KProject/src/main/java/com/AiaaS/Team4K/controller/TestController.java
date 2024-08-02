@@ -24,11 +24,20 @@ public class TestController {
 		return "count";
 	}
 	
+	@GetMapping("/")
+	public String main() {
+		return "index";
+	}
+	
 	@GetMapping("/budget")
 	public String moveBudget() {
-		return "/budget";
+		return "budget";
 	}
 
+	@GetMapping("/greenHouse")
+	public String greenHouse() {
+	    return "greenHouse";
+	}
 
 }
 
