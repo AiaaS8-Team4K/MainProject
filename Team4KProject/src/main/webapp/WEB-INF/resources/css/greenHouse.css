@@ -102,25 +102,84 @@ body img {
 
 .hero .hero-text {
     position: absolute;
-    bottom: 20px; /* 화면의 하단에서 20px 떨어진 위치 */
-    left: 20px; /* 화면의 좌측에서 20px 떨어진 위치 */
+    bottom: 20px; 
+    left: 20px; 
     color: #fff;
     z-index: 2;
-    text-align: left; /* 텍스트를 왼쪽 정렬 */
-    padding: 10px; /* 내부 여백 */
+    text-align: left; 
+    padding: 10px; 
 }
 
+.prediction {
+    background-color: #fff; /* 초기 배경 색상 */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* 모서리를 둥글게 */
+    animation: fadeBackground 2s forwards; /* 애니메이션 적용 */
+}
 
-.intention, .introduce, .effect, .teamMember {
+@keyframes fadeBackground {
+    0% {
+    background-color: #fff;
+	}
+    100% {
+    background-color: #EAEAEA;
+	}
+}
+
+.prediction h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.prediction-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.prediction .item {
+    background-color: white; /* 각 아이템의 배경을 흰색으로 설정 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+    flex: 1;
+    min-width: 200px;
+    max-width: 45%;
+    animation: fadeIn 1s forwards; /* 아이템에 페이드 인 애니메이션 적용 */
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.prediction .item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prediction .item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.prediction, .introduce, .effect, .teamMember {
     padding: 3rem 0;
 }
 
-.intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+.prediction .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
     display: flex;
     justify-content: space-around;
 }
 
-.intention .item, .introduce .item, .teamMember .item, .effect .item {
+.prediction .item, .introduce .item, .teamMember .item, .effect .item {
     text-align: center;
     width: 30%;
 }
@@ -128,6 +187,8 @@ body img {
 .introduce {
     border-radius: 15%;
     background-color: #EAEAEA;
+    padding: 10px 20px 30px 40px; /* 상, 우, 하, 좌 순서로 패딩 값 설정 */
+    margin: 0 auto; /* 외부 여백을 추가하여 요소 간의 간격을 유지 */
 }
 
 .introduce .item img {
@@ -201,20 +262,64 @@ body img {
     background-color: #EAEAEA;
 }
 
-.intention .intention-items {
+.prediction .intention-items {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.intention .item {
+.prediction .item {
     text-align: center;
     width: 100%;
     max-width: 600px;
     padding: 1rem;
     border: 1px solid #333;
     border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1220px) {
+    .container {
+        width: 95%;
+    }
+    .prediction .prediction-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .prediction .prediction-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .prediction .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .prediction .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    }
 }
 
 .teamMember-items {
@@ -234,49 +339,4 @@ body img {
     height: 300px; 
     object-fit: cover;
     border-radius: 50%;
-}
-
-
-/* Responsive */
-@media (max-width: 1220px) {
-    .container {
-        width: 95%;
-    }
-    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
-        flex-direction: column;
-        align-items: center;
-    }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
-        width: 80%;
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .header .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero video {
-        height: 70vh;
-    }
-    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
-        flex-direction: column;
-    }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
-        flex-direction: column;
-    }
-    .intention .item, .introduce .item, .teamMember .item, .effect .item {
-        width: 100%;
-    }
 }
