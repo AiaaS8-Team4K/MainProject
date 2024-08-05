@@ -117,15 +117,25 @@
             <div class="container">
                 <h2>팀원 소개</h2>
                 <div class="teamMember-items">
-                    <div class="item" data-animation="fade-up">
-                        <img src="images/mq1280.jpg" alt="유안 공장">
-                        <h3>유안 공장</h3>
-                        <p>주소: ~</p>
+                    <div class="item">
+                        <img src="images/member1.png" alt="유안 공장">
+                        <h3>김명진</h3>
+                        <p></p>
                     </div>
-                    <div class="item" data-animation="fade-up">
-                        <img src="images/mq1280.jpg" alt="진천 공장">
-                        <h3>진천 공장</h3>
-                        <p>주소: ~</p>
+                    <div class="item">
+                        <img src="images/member2.png" alt="진천 공장">
+                        <h3>김민준</h3>
+                        <p></p>
+                    </div>
+                    <div class="item">
+                        <img src="images/member3.png" alt="유안 공장">
+                        <h3>김성훈</h3>
+                        <p></p>
+                    </div>
+                    <div class="item">
+                        <img src="images/member4.png" alt="유안 공장">
+                        <h3>김유나</h3>
+                        <p></p>
                     </div>
                 </div>
             </div>

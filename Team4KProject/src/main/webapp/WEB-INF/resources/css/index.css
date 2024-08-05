@@ -217,6 +217,26 @@ body img {
     border-radius: 8px;
 }
 
+.teamMember-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; 
+    justify-items: center;
+    align-items: center;
+}
+
+.teamMember-items .item {
+    text-align: center;
+}
+
+.teamMember-items .item img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
 /* Responsive */
 @media (max-width: 1220px) {
     .container {
