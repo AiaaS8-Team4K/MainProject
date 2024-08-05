@@ -187,6 +187,8 @@ body img {
 .introduce {
     border-radius: 15%;
     background-color: #EAEAEA;
+    padding: 10px 20px 30px 40px; /* 상, 우, 하, 좌 순서로 패딩 값 설정 */
+    margin: 0 auto; /* 외부 여백을 추가하여 요소 간의 간격을 유지 */
 }
 
 .introduce .item img {
@@ -323,7 +325,7 @@ body img {
 .teamMember-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px; /* ���썝 媛꾩쓽 媛꾧꺽 議곗젙 */
+    gap: 40px; 
     justify-items: center;
     align-items: center;
 }
@@ -333,9 +335,8 @@ body img {
 }
 
 .teamMember-items .item img {
-    width: 300px; /* �씠誘몄� �겕湲� 議곗젙 */
-    height: 300px; /* �씠誘몄� �겕湲� 議곗젙 */
+    width: 300px; 
+    height: 300px; 
     object-fit: cover;
     border-radius: 50%;
 }
-

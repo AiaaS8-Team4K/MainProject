@@ -102,12 +102,12 @@ body img {
 
 .hero .hero-text {
     position: absolute;
-    bottom: 20px; /* �솕硫댁쓽 �븯�떒�뿉�꽌 20px �뼥�뼱吏� �쐞移� */
-    left: 20px; /* �솕硫댁쓽 醫뚯륫�뿉�꽌 20px �뼥�뼱吏� �쐞移� */
+    bottom: 20px; /* 화면의 하단에서 20px 떨어진 위치 */
+    left: 20px; /* 화면의 좌측에서 20px 떨어진 위치 */
     color: #fff;
     z-index: 2;
-    text-align: left; /* �뀓�뒪�듃瑜� �쇊履� �젙�젹 */
-    padding: 10px; /* �궡遺� �뿬諛� */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    padding: 10px; /* 내부 여백 */
 }
 
 
@@ -126,12 +126,8 @@ body img {
 }
 
 .introduce {
-    max-width: 100%; /* 섹션의 최대 너비 설정 */
-    width: 90vw; /* 가로 너비를 늘림 */
-    margin: 0 auto; /* 중앙 정렬 */
-    padding: 0.5rem; /* 패딩 조정 */
-    border-radius: 15%; /* 모서리를 덜 둥글게 */
-    background-color: #EAEAEA; /* 배경색 */
+    border-radius: 15%;
+    background-color: #EAEAEA;
 }
 
 .introduce .item img {
@@ -264,23 +260,3 @@ body img {
         width: 100%;
     }
 }
-
-.teamMember-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px; /* 팀원 간의 간격 조정 */
-    justify-items: center;
-    align-items: center;
-}
-
-.teamMember-items .item {
-    text-align: center;
-}
-
-.teamMember-items .item img {
-    width: 300px; /* 이미지 크기 조정 */
-    height: 300px; /* 이미지 크기 조정 */
-    object-fit: cover;
-    border-radius: 50%;
-}
-

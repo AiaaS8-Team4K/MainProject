@@ -22,7 +22,7 @@
         }
         
         .footer:hover {
-            height: 15vh;
+            height: 14vh;
         }
         .footer-default-content {
             height: 100%;

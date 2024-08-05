@@ -22,12 +22,20 @@
             width: 48%; /* 각 요소가 부모의 50%를 차지하도록 설정 */
         }
         .form-container {
-            border: 1px solid #ccc; /* 스타일을 위한 테두리 추가 */
+           	width: 48%; /* 너비 조정 */
             padding: 10px;
             box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
         }
+
+		.calculator {
+			margin-left: auto; /* 테이블을 오른쪽으로 이동 */
+    		margin-right: 0;
+    		width: auto; /* 테이블의 너비를 자동으로 설정 */
+    		
+		}
         .text-container {
             text-align: left; /* 텍스트 정렬을 왼쪽으로 설정 */
+              
         }
         .text-container img {
             width: 100%; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
@@ -38,8 +46,68 @@
             width: 100%; /* form-container에 맞게 설정 */
             box-sizing: border-box;
         }
-    
-    </style>
+    	        
+        /* 전체 테이블 스타일링 */
+		table {
+			/*justyfiy-content: right;*/
+   			 width: 50%;
+    		border-collapse: collapse; /* 테두리 겹침 방지 */
+    		font-size: 16px;	
+		}
+		
+		
+		.section-container {
+    display: flex;	
+    justify-content: space-between; /* 좌우로 공간을 분배 */
+    align-items: flex-start; /* 상단 정렬 */
+}
+
+.form-container, .text-container {
+    width: 48%; /* 양쪽 컨테이너가 동일한 너비를 가짐 */
+    box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
+}
+
+.text-container {
+    /* 너비를 form-container와 맞추기 위한 설정 */
+    max-width: 48%; /* 최대 너비를 form-container와 일치시킴 */
+    text-align: left; /* 텍스트 정렬을 왼쪽으로 설정 */
+}
+		
+		
+		
+		
+		
+		
+/* 헤더 스타일링 */
+thead {
+    background-color: #333; /* 짙은 회색 배경 */
+    color: #fff; /* 흰색 글자 */
+}
+
+thead th {
+    text-align: left; /* 왼쪽 정렬 */
+    padding: 8px; /* 셀 내부 여백 */
+}
+
+/* 헤더 셀의 스타일 */
+thead th {
+    background-color: #333; /* 짙은 회색 배경 */
+    color: #fff; /* 흰색 글자 */
+    border: 1px solid #333; /* 배경과 동일한 색상의 테두리 */
+}
+
+/* 헤더의 전체 행 스타일링 */
+thead tr {
+    border-bottom: 1px solid #333; /* 헤더 아래에 동일한 색상의 얇은 선 추가 */
+}
+
+/* 일반 셀 스타일링 */
+td, th {
+    border: 1px solid #ddd; /* 일반 테두리 색상 */
+    padding: 8px; /* 셀 내부 여백 */
+}
+
+</style>
   <link rel="stylesheet" href="css/index.css">
   <script src="js/index.js"></script>
 </head>
@@ -66,47 +134,55 @@
         </div>
         <div class="section intention">
                 <div class="container">
-                    <h2>섹션 1, 계산기</h2>
+                    <h2 style="display: inline-block;">수입 비용 예측 서비스</h2>
+                    <p>에너지 자원 시세를 분석하여 미래의 자원 수입 비용을 예측한다.</p>
                     <div class="section-container">
                         <!-- 왼쪽에 배치할 폼 -->
                         <div class="form-container">
                             <form action="<c:url value='/budgetCalculate'/>" method="post" name="budget_Calculator" onsubmit="return infoConfirm()">
-                                <fieldset class="calculator" style="width: 100%; height: 750px;">
-                                    <legend>명년도 수입 예산 예측</legend>
-                                    <ul>
-                                        <li>
-                                            <span>내년도 예상 수입액:</span>
-                                            <span>${result} 달러 </span>
-                                        </li>
-                                        <li>
-                                            <label>국제 자원 시세</label>
-                                        </li>
-                                        <li>
-                                            <span>원유</span>
-                                            <span>배럴당 <input type="number"/> 달러 </span>
-                                        </li>
-                                        <li>
-                                            <span>석탄</span>
-                                            <span>톤당 <input type="number"/> 달러 </span>
-                                        </li>
-                                        <li>
-                                            <span>천연가스</span>
-                                            <span>1000입방 피트당 <input type="number"/> 달러 </span>
-                                        </li>
-                                        <li>
-                                            <span>우라늄</span>
-                                            <span>파운드당 <input type="number"/> 달러 </span>
-                                        </li>
-                                    </ul>
-                                </fieldset>    
+                                <table class="calculator">
+                                    <caption>명년도 수입 예산 예측</caption>
+                                    <thead>
+                                    	<tr>
+                                            <th colspan="2">내년도 예상 수입액 <br>   ${result} ??달러</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>                                     
+                                        <tr>                                       
+                                            <th colspan="2">국제 자원 시세</th>
+                                        </tr>
+                                        <tr>
+                                            <td>원유</td>                                           
+                                             <td style="text-align: right;">배럴당 <input type="number"/> 달러</td>
+                                        </tr>
+                                        <tr>
+                                            <td>석탄</td>                                            
+                                            <td style="text-align: right;">톤당 <input type="number"/> 달러</td>
+                                        </tr>
+                                        <tr>
+                                            <td>천연가스</td>                                            
+                                             <td style="text-align: right;">1000입방 피트당 <input type="number"/> 달러</td>
+                                        </tr>
+                                        <tr>
+                                            <td>우라늄</td>                                            
+                                             <td style="text-align: right;">파운드당 <input type="number"/> 달러</td>
+                                        </tr>                                                                          
+                                        <tr colspan="2" style="display: flex; justify-content: center; gap: 10px; padding-top: 400px;">
+                                        	<td>                                       	
+                                        	<input type="submit" value="계산하기">
+                                        	<input type="reset" value="초기화">
+                                        	</td>
+                                        </tr>
+                                    </tbody>
+                                </table>    
                             </form>
                         </div>
                         <!-- 오른쪽에 배치할 텍스트와 이미지 -->
                         <div class="text-container">
                             <div class="section1text">    
-                                <p>**섹션 1에 들어갈 내용.**
-                                <br>모델에 대한 간단한 설명이랑 계산기에 대한 간단한 설명이 들어갑니다.<br>
-                                    이 모델은 대한민국에서 사용되는 주요 에너지 자원 네 가지의 특정 연도 국제 시세와 그 명년도의 국내 에너지 자원 수입 비용과의 관계를 분석하여 만들어졌습니다.
+                                <p style="width: 50%; font-size: 16px;">
+                                **섹션 1에 들어갈 내용.**
+                                <br> 이 모델은 대한민국에서 사용되는 주요 에너지 자원 네 가지의 특정 연도 국제 시세와 그 명년도의 국내 에너지 자원 수입 비용과의 관계를 분석하여 만들어졌습니다.
                                     즉, 특정 연도의 국제 시세를 바탕으로 다음해의 수입 비용을 예측합니다.
                                     좌측의 계산기는 현재의 국제 시세를 바탕으로 내년의 수입 비용을 예측합니다.
                                     예측에 사용된 관계 분석 모델에서, 중요성이 높은 두 가지 자원의 국제 시세만을 사용하여 예측의 정확도를 높입니다.

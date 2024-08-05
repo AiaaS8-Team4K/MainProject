@@ -24,19 +24,19 @@ public class TestController {
 		return "count";
 	}
 	
-	@GetMapping("/")
-	public String main() {
-		return "index";
-	}
-	
 	@GetMapping("/budget")
 	public String moveBudget() {
-		return "budget";
+		return "/budget";
 	}
 
-	@GetMapping("/greenHouse")
-	public String greenHouse() {
-	    return "greenHouse";
+	@GetMapping("/frame")
+	public String moveFrame() {
+		return "/frame";
+	}
+	
+	@GetMapping("/index")
+	public String moveIndex() {
+		return"/index";
 	}
 
 }

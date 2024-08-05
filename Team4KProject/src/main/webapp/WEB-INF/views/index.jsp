@@ -19,7 +19,7 @@
         <div class="section hero">
             <div class="carousel">
                 <img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
-                <a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="전기차 전력수요 예측" dataText2="두번째 텍스트"></a>
+                <a href="frame"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="전기차 전력수요 예측" dataText2="두번째 텍스트"></a>
                 <a href="#"><img src="images/mq1280.jpg" alt="Hero Image 3" dataText1="에너지자원 수입비용 예측" dataText2="세번째 텍스트"></a>
                 <a href="#"><img src="images/mq1920.jpg" alt="Hero Image 4" dataText1="에너지 효율 예측" dataText2="네번째 텍스트"></a>
                 <a href="#"><img src="images/mq1280.jpg" alt="Hero Image 5" dataText1="기후변화 강수량 예측" dataText2="다섯번째 텍스트"></a>
@@ -117,30 +117,19 @@
             <div class="container">
                 <h2>팀원 소개</h2>
                 <div class="teamMember-items">
-                    <div class="item">
-                        <img src="images/member1.png" alt="유안 공장">
-                        <h3>김명진</h3>
-                        <p></p>
+                    <div class="item" data-animation="fade-up">
+                        <img src="images/mq1280.jpg" alt="유안 공장">
+                        <h3>유안 공장</h3>
+                        <p>주소: ~</p>
                     </div>
-                    <div class="item">
-                        <img src="images/member2.png" alt="진천 공장">
-                        <h3>김민준</h3>
-                        <p></p>
-                    </div>
-                    <div class="item">
-                        <img src="images/member3.png" alt="유안 공장">
-                        <h3>김성훈</h3>
-                        <p></p>
-                    </div>
-                    <div class="item">
-                        <img src="images/member4.png" alt="유안 공장">
-                        <h3>김유나</h3>
-                        <p></p>
+                    <div class="item" data-animation="fade-up">
+                        <img src="images/mq1280.jpg" alt="진천 공장">
+                        <h3>진천 공장</h3>
+                        <p>주소: ~</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
     </div>
     <jsp:include page ="./includes/footer.jsp" flush="true"/>
