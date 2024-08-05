@@ -19,7 +19,7 @@
         <div class="section hero">
             <div class="carousel">
                 <img src="images/indexHero1.jpg" alt="Hero Image 1" class="active" dataText1="Abundant energy makes a light heart." dataText2="에너지 안보 지킴이 서비스">
-                <a href="#"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="전기차 전력수요 예측" dataText2="두번째 텍스트"></a>
+                <a href="frame"><img src="images/indexHero2.png" alt="Hero Image 2" dataText1="전기차 전력수요 예측" dataText2="두번째 텍스트"></a>
                 <a href="#"><img src="images/mq1280.jpg" alt="Hero Image 3" dataText1="에너지자원 수입비용 예측" dataText2="세번째 텍스트"></a>
                 <a href="#"><img src="images/mq1920.jpg" alt="Hero Image 4" dataText1="에너지 효율 예측" dataText2="네번째 텍스트"></a>
                 <a href="#"><img src="images/mq1280.jpg" alt="Hero Image 5" dataText1="기후변화 강수량 예측" dataText2="다섯번째 텍스트"></a>

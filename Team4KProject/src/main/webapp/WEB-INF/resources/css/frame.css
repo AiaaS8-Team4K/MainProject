@@ -1,0 +1,73 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: calc(14px + 0.5vw);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-size: calc(24px + 1vw);
+}
+
+h2 {
+    font-size: calc(20px + 0.8vw);
+    text-align: center;
+}
+
+p {
+    font-size: calc(14px + 0.3vw);
+}
+
+.section {
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 1220px) {
+    /* .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    } */
+}
+
+@media (max-width: 768px) {
+    /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}
+
+@media (max-width: 480px) {
+    /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}

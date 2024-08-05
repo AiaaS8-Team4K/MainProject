@@ -29,6 +29,15 @@ public class TestController {
 		return "/budget";
 	}
 
+	@GetMapping("/frame")
+	public String moveFrame() {
+		return "/frame";
+	}
+	
+	@GetMapping("/index")
+	public String moveIndex() {
+		return"/index";
+	}
 
 }
 
