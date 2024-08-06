@@ -26,10 +26,24 @@ public class TestController {
 	
 	@GetMapping("/budget")
 	public String moveBudget() {
-		return "/budget";
+		return "budget";
 	}
 
+	@GetMapping("/frame")
+	public String moveFrame() {
+		return "frame";
+	}
+	
+	@GetMapping("/index")
+	public String moveIndex() {
+		return "index";
+	}
 
+	
+	@GetMapping("/greenHouse")
+	public String moveGreenHouse() {
+		return"greenHouse";
+	}
 }
 
 

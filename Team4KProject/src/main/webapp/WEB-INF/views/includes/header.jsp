@@ -39,6 +39,8 @@
         }
         
         .logoBox img{
+        	width: 100%;
+        	height: 100%;
          	object-fit: contain;
         }
         .navBox{
@@ -155,15 +157,15 @@
     <header class="header">
         <div id="headGrid">
             <div class="box logoBox">
-                <a href="#"><img src="images/Logo3.png" alt="Logo"></a>
+                <a href="index"><img src="images/Logo3.png" alt="Logo"></a>
             </div>
             <div class="box navBox">
                 <nav class="menuNav">
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">전기차 전력</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                        <li><a href="frame"><span class="do-hyeon-regular">전기차 전력</span></a></li>
+                        <li><a href="frame"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="frame"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="frame"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/budget"><span class="do-hyeon-regular">에너지 예산</span></a></li>
@@ -172,10 +174,10 @@
                         <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">에너지 효율</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                        <li><a href="greenHouse"><span class="do-hyeon-regular">에너지 효율</span></a></li>
+                        <li><a href="greenHouse"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="greenHouse"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="greenHouse"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                     <ul>
                         <li><a href="#"><span class="do-hyeon-regular">가뭄 홍수 발생</span></a></li>
