@@ -1,0 +1,153 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: calc(14px + 0.5vw);
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	color: #333;
+}
+
+h1 {
+	font-size: calc(24px + 1vw);
+}
+
+h2 {
+	font-size: calc(20px + 0.8vw);
+	text-align: center;
+}
+
+p {
+	font-size: calc(14px + 0.3vw);
+}
+
+.section {
+	transition: opacity 0.5s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* Responsive */
+@media ( max-width : 1220px) {
+	/* .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    } */
+}
+
+@media ( max-width : 768px) { /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}
+
+@media ( max-width : 480px) { /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}
+
+/* Flexbox를 사용하여 요소를 좌우로 배치 */
+.predict-calculator {
+	display: flex;
+	justify-content: space-between; /* 좌우로 공간을 분배 */
+	align-items: flex-start; /* 상단 정렬 */
+}
+
+.predict-calculator .form-container, .section-container .text-container {
+	width: 48%; /* 각 요소가 부모의 50%를 차지하도록 설정 */
+}
+
+.form-container {
+	width: 48%; /* 너비 조정 */
+	padding: 10px;
+	box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
+}
+
+.calculator {
+	margin-left: auto; /* 테이블을 오른쪽으로 이동 */
+	margin-right: 0;
+	width: auto; /* 테이블의 너비를 자동으로 설정 */
+}
+
+.text-container {
+	text-align: left; /* 텍스트 정렬을 왼쪽으로 설정 */
+}
+
+.text-container img {
+	width: 100%; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
+	height: auto;
+}
+
+/* 줄 간격 및 내부 여백 설정 */
+.form-container fieldset {
+	width: 100%; /* form-container에 맞게 설정 */
+	box-sizing: border-box;
+}
+
+/* 전체 테이블 스타일링 */
+table {
+	/*justyfiy-content: right;*/
+	width: 50%;
+	border-collapse: collapse; /* 테두리 겹침 방지 */
+	font-size: 16px;
+}
+
+.form-container, .text-container {
+	width: 48%; /* 양쪽 컨테이너가 동일한 너비를 가짐 */
+	box-sizing: border-box; /* 테두리와 패딩을 너비에 포함 */
+}
+
+.text-container {
+	/* 너비를 form-container와 맞추기 위한 설정 */
+	max-width: 48%; /* 최대 너비를 form-container와 일치시킴 */
+	text-align: left; /* 텍스트 정렬을 왼쪽으로 설정 */
+}
+
+/* 헤더 스타일링 */
+thead {
+	background-color: #333; /* 짙은 회색 배경 */
+	color: #fff; /* 흰색 글자 */
+}
+
+thead th {
+	text-align: left; /* 왼쪽 정렬 */
+	padding: 8px; /* 셀 내부 여백 */
+	background-color: #333; /* 짙은 회색 배경 */
+	color: #fff; /* 흰색 글자 */
+	border: 1px solid #333; /* 배경과 동일한 색상의 테두리 */
+}
+
+/* 헤더의 전체 행 스타일링 */
+thead tr {
+	border-bottom: 1px solid #333; /* 헤더 아래에 동일한 색상의 얇은 선 추가 */
+}
+
+/* 일반 셀 스타일링 */
+td, th {
+	border: 1px solid #ddd; /* 일반 테두리 색상 */
+	padding: 8px; /* 셀 내부 여백 */
+}
