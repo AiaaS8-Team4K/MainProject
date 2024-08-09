@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +25,15 @@
 	<div id="fullpage">
 
 
-		<div class="section intention">
+		<div class="section calculator">
 			<div class="container">
-				<h2 style="display: inline-block;">수입 비용 예측 서비스</h2>
-				<p>에너지 자원 시세를 분석하여 미래의 자원 수입 비용을 예측한다.</p>
+				
+				<span class= "sec1title">
+				<span class= "sec1titleline1">수입 비용 예측 서비스</span>
+				<br>
+				에너지 자원 시세를 분석하여 미래의 자원 수입 비용을 예측한다.				
+				</span>
+				<div id="sec1backgroundbox"><hr id=boxTopLine>
 				<div class="predict-calculator">
 					<!-- 왼쪽에 배치할 폼 -->
 					<div class="form-container">
@@ -69,10 +75,12 @@
 											달러
 										</td>
 									</tr>
-									<tr colspan="2"
-										style="display: flex; justify-content: center; gap: 10px; padding-top: 400px;">
-										<td><input type="submit" value="계산하기"> <input
-											type="reset" value="초기화"></td>
+									<tr style="height:300px"> 
+										<td colspan="2"></td>
+									</tr>
+									<tr>
+										<td colspan="2" style="text-align:center;"><input type="submit" value="계산하기">
+											<input type="reset" value="초기화"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -91,9 +99,10 @@
 							</p>
 						</div>
 						<div class="3dScatterPlot">
-							<img src="<c:url value='/images/3dScatterPlot.png'/>"
+							<img src="images/3dScatterPlot.png"
 								alt="3D 산점도" style="width: 750px; height: auto;">
-						</div>
+						</div>					
+					</div>
 					</div>
 				</div>
 			</div>
@@ -101,24 +110,31 @@
 
 		<div class="section introduce">
 			<div class="container">
-				<h2>섹션 2, 모델 소개</h2>
+				
 				<div class="introduce-items">
 					<div class="item">
 						<img src="images/mq1280.jpg" alt="예측 서비스 기능">
 						<h3>모델 1, 4가지 종속변수</h3>
+						<br>
 					</div>
 					<div class="item">
 						<img src="images/mq1280.jpg" alt="분석 서비스 기능">
 						<h3>모델 2, 2가지 종속변수</h3>
 						<p>석유와 천연가스</p>
+						<br>
 					</div>
 					<div class="item">
 						<img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">
 						<h3>모델 summary</h3>
-						<p>서머리 앤 대머리</p>
+						<p>서머리 앤 대머리</p>	
 					</div>
-
-					<div class="section1text">
+					
+					<hr id="sec2Line">
+					<h1 style="display: inline-block;">02</h2><br>
+					<h3 style="display: inline-block;">모델 소개</h6>
+					
+					<div class="section2text">
+					
 						<p>**섹션 2에 들어갈 내용** 1. 모델 변화(스텝와이즈 기법, StepAIC함수 사용) 진행과정 / 3.
 							왜 특정 자원은 빼도 되는지에 대한 근거. 처음에 모델을 생성할 때 4가지 자원의 국제시세를 사용하였지만, 우라늄과
 							석탄 시세의 경우 AIC수치와 p값을 기반으로 국내 수입예산의 변화에 미치는 영향이 미미하여 예측 모델에서
