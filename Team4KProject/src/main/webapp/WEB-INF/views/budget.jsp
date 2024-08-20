@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="css/budget.css">
 <style>
 </style>
-<script src="js/frame.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/budget.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>에너지 자원 수입 비용 예측</title>
@@ -27,8 +28,8 @@
 	<div id="fullpage">
 
 		<!-- 36599e 블루
-d86e1f 오렌지
-e9e9e9화이트 -->
+		d86e1f 오렌지
+		e9e9e9화이트 -->
 		<div class="section calculator">
 			<div class="container">
 
@@ -222,30 +223,258 @@ e9e9e9화이트 -->
 			<form action="index" method="get">
 				<input type="button" onclick="submit()">
 				<p style="text-align: center;">
-					여기에 레퍼런스 데이터 차트가 올것임. 차트 js로 독립변수 데이터들 차트를 그리고 그 차트들에 하이퍼텍스트 링크를
-					걸것임.
+					여기에 모델 신뢰성 보여주는 차트 네개 넣자<br>
 					<!-- 밑에부분 내용은 다 줄여야 함. 그리고 위에도 내용 3분의 2로 줄여야 함-->
 					왼쪽에서 첫번째 플롯이 ‘잔차 vs 적합값 플롯(Residual vs fitted)’이며, 기울기가 0이 되는것이
-					이상적입니다. 현재 기울기가 0으로, 이상적인 형태를 보이고 있습니다. <br>두 번째 플롯인 ‘정규 Q-Q 플롯(Normal
-					Q-Q plot)’의 경우 잔차가 정규 분포를 따르는지 확인하기 위한 그래프로, 대각선 직선(주로 45도)에 가깝게
-					점들이 분포합니다. 현재 이상적인 플롯의 형태를 보여주고 있습니다. <br>세 번째 플롯인 ‘스케일-위치
-					플롯(Scale-Location plot)’의 경우 기울기가 0인 직선이 이상적이며, 이상치를 확인 가능합니다. 점들이
-					x축과 평행하여 고르게 분포하여, 수평선의 형태로 보이는 것이 좋습니다. <br>네 번째 플롯인 ‘잔차 vs 영향력
-					플롯(Residual vs Leverage plot)’의 경우 이상치가 있는지에 대한 정보를 제공합니다. 잔차가 매우
-					크거나 작아서 이상치로 고려되는 점이 없이 무작위 패턴으로 점들이 분포되면 이상적입니다. <br>residual vs
-					fitted, normal qq, scale location, residual vs leverage 잔차 vs 적합값
-					플롯 / 기울기 0이 되는 것이 이상적 정규 QQ플롯 잔차가 정규 분포를 따르는지 확인하기 위한 그래프 스케일-위치 플롯
-					/ 기울기가 0인 직선이 이상적, 이상치 확인 가능 잔차 vs 영향력 플롯 / 설명변수가 얼마나 극단에 치우쳐 있는지를
-					뜻한다.
+					이상적입니다. 현재 기울기가 0으로, 이상적인 형태를 보이고 있습니다. <br>두 번째 플롯인 ‘정규 Q-Q
+					플롯(Normal Q-Q plot)’의 경우 잔차가 정규 분포를 따르는지 확인하기 위한 그래프로, 대각선 직선(주로
+					45도)에 가깝게 점들이 분포합니다. 현재 이상적인 플롯의 형태를 보여주고 있습니다. <br>세 번째 플롯인
+					‘스케일-위치 플롯(Scale-Location plot)’의 경우 기울기가 0인 직선이 이상적이며, 이상치를 확인
+					가능합니다. 점들이 x축과 평행하여 고르게 분포하여, 수평선의 형태로 보이는 것이 좋습니다. <br>네 번째
+					플롯인 ‘잔차 vs 영향력 플롯(Residual vs Leverage plot)’의 경우 이상치가 있는지에 대한 정보를
+					제공합니다. 잔차가 매우 크거나 작아서 이상치로 고려되는 점이 없이 무작위 패턴으로 점들이 분포되면 이상적입니다. <br>residual
+					vs fitted, normal qq, scale location, residual vs leverage 잔차 vs
+					적합값 플롯 / 기울기 0이 되는 것이 이상적 정규 QQ플롯 잔차가 정규 분포를 따르는지 확인하기 위한 그래프
+					스케일-위치 플롯 / 기울기가 0인 직선이 이상적, 이상치 확인 가능 잔차 vs 영향력 플롯 / 설명변수가 얼마나 극단에
+					치우쳐 있는지를 뜻한다.
 				</p>
 			</form>
 		</div>
 
 
 
-		<div class="section sectionName"></div>
-		<div class="section sectionName"></div>
+		<div class="section chart">
+
+
+			<div class="chart-grid">
+
+				<div id="chartIndex" style="justify-contents: start;">
+					<hr id="sec4Line">
+					<span
+						style="font-size: 72px; font-weight: 600; line-height: 1.2; display: inline-block;">04</span><br>
+					<span
+						style="font-size: 24px; font-weight: 600; margin-top: 10px; display: inline-block;">레퍼런스
+						데이터 소개</span><br>
+					<!-- <span style="width: 45%; font-size: 20px; font-weight: 200; display: inline-block;">
+								독립변수로 사용한 데이터는 크게 다섯종류 입니다. 네가지 에너지 자원들의 국제 시세와, 국내로 수입되는 이 자원들의 수입액 데이터입니다.
+								현재 차트에서는 수입액 데이터만을 제공하고 있지만, 출처 페이지로 이동 시 각 자원들의 수입액을 확인 가능합니다.</span> -->
+				</div>
+				
+				
+				<div id="chartContainer1">
+					<canvas id="oilChart"></canvas>
+				</div>
+
+				<div id="chartContainer2">
+					<canvas id="coalChart"></canvas>
+				</div>
+
+				<div id="chartContainer3">
+					<canvas id="LNGChart"></canvas>
+				</div>
+
+				<div id="chartContainer4">
+					<canvas id="uranChart"></canvas>
+				</div>
+
+				<div id="chartContainer5">
+					<canvas id="newChart"></canvas>
+				</div>
+				<p style="grid-column: span 3; text-align: center; font-size: 12px;">차트를 클릭하면 출처 페이지로 <span style="font-weight: 600;">이동</span>합니다.</p>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="section sectionName">
+		<p style="text-align: center;">마지막 섹션. 여기에는 무엇을 넣어야 할까. 원래대로라면 머신러닝 돌린 내용을 넣어야 하지만...</p></div>
 	</div>
 	<jsp:include page="./includes/footer.jsp" flush="true" />
+	<script>
+    // 첫 번째 차트 (국제 원유 시세)
+    var oilData = {
+        labels: ['1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+            '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: '국제 원유 시세 (배럴 당 달러)',
+            data: [37.9, 36.9, 32.9, 30.1, 29.1, 27.8, 14.4, 18.2, 14.7, 17.8, 24.5, 21.5, 20.6, 18.5, 17.2, 18.4, 22.2, 20.6, 14.4, 19.2, 30.3, 25.9, 26.1, 31.1, 41.4, 56.5, 66.1, 72.3, 99.6, 61.7, 79.4,
+                95.1, 94.2, 98, 93.1, 48.8, 43.2, 50.9, 64.8, 56.9, 39.4, 68, 94.8, 77.6, 78.8],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    };
+
+    var oilCtx = document.getElementById('oilChart').getContext('2d');
+    var oilChart = new Chart(oilCtx, {
+        type: 'line',
+        data: oilData,
+        options: {}
+    });
+
+    document.getElementById('oilChart').addEventListener('click', function() {
+        window.location.href = 'https://www.ibisworld.com/de/bed/weltmarktpreis-fuer-rohol/432/';
+    });
+
+    document.getElementById('oilChart').addEventListener('mouseover', function() {
+        this.style.cursor = 'pointer';	
+    });
+
+    document.getElementById('oilChart').addEventListener('mouseout', function() {
+        this.style.cursor = 'default';
+    });
+
+    // 두 번째 차트 (국제 석탄 시세)
+    var coalData = {
+        labels: ['1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+            '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: '국제 석탄 시세 (톤 당 달러)',
+            data: [49.8, 54.1,	55.2, 53.5, 52.7, 53, 49.8, 48.7, 47.8,	47.4, 47.4, 47.5, 46.3,	45.3, 44.5, 44.3, 45.5, 45.5, 44.5, 41.8, 39, 41.8, 45.5, 44.5, 63.8, 81.7, 90.8, 89.1, 133.7,            	118.4,
+            	146.1, 186.2,151.3, 115.3, 99.3,	88.5, 83, 138, 140.7, 136.7, 104.5, 158,	282.4, 208, 228],
+            fill: false,
+            borderColor: 'rgb(73,91,191)',
+            tension: 0.1
+        }]
+    };
+
+    var coalCtx = document.getElementById('coalChart').getContext('2d');
+    var coalChart = new Chart(coalCtx, {
+        type: 'line',
+        data: coalData,
+        options: {}
+    });
+
+    document.getElementById('coalChart').addEventListener('click', function() {
+        window.location.href = 'https://www.ibisworld.com/de/bed/weltmarktpreis-fuer-kokskohle/437/';
+    });
+
+    document.getElementById('coalChart').addEventListener('mouseover', function() {
+        this.style.cursor = 'pointer';
+    });
+
+    document.getElementById('coalChart').addEventListener('mouseout', function() {
+        this.style.cursor = 'default';
+    });
+
+    // 세 번째 차트 (국제 천연가스 시세)
+     var LNGData = {
+        labels: ['1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+            '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: '국제 천연가스 시세 (1000세제곱피트당 달러)',
+            data: [2.9, 3.3,            	3.5,            	3.3,            	3.2,            	3.1,            	2.8,            	2.1,
+            	2,            	1.9,            	2.3,            	2.3,            	2.2,            	2.4,            	2.2,            	2.2,
+            	2.8,            	2.6,            	2.3,            	2.2,            	4.1,            	4,            	3.2,            	4.7,
+            	5.1,            	7.6,            	7.6,            	7.8,            	11.1,            	6.3,            	6.3,            	7.3,
+            	7.1,            	7.8,            	7.2,            	4.7,            	3.5,            	4.3,            	5.4,            	3.7,
+            	2.6,            	10,            	23.4,            	7.8,            	8.4            	            ],
+            fill: false,
+            borderColor: 'rgb(167,73,191)',
+            tension: 0.1
+        }]
+    };
+    
+    
+    
+    var LNGCtx2 = document.getElementById('LNGChart').getContext('2d');
+    var LNGChart = new Chart(LNGCtx2, {
+        type: 'line',
+        data: LNGData,
+        options: {}
+    });
+
+    document.getElementById('LNGChart').addEventListener('click', function() {
+        window.location.href = 'https://www.ibisworld.com/de/bed/weltmarktpreis-fuer-erdgas/434/';
+    });
+
+    document.getElementById('LNGChart').addEventListener('mouseover', function() {
+        this.style.cursor = 'pointer';
+    });
+
+    document.getElementById('LNGChart').addEventListener('mouseout', function() {
+        this.style.cursor = 'default';
+    });
+
+    // 네 번째 차트 (국제 우라늄 시세)
+    
+    var uranData = {
+        labels: ['1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+            '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: '국제 우라늄 시세 (톤 당 달러)',
+            data: [31.8,            	24.2,            	19.9,            	23,            	17.3,            	14.4,            	17,            	16.8,
+            	14.7,            	10.1,            	9.7,            	8.5,            	8.6,            	10.1,            	9.4,            	11.7,
+            	15.6,            	12.1,            	10.4,            	10,            	8.3,            	8.6,            	9.8,            	11.2,
+            	18,            	27.9,            	47.7,            	99.2,            	64.2,            	46.7,            	46,            	56.2,
+            	48.9,            	38.6,            	33.5,            	36.8,            	26.5,            	22.1,            	24.5,            	25.9,
+            	29.4,            	32.9,            	40.8,            	48.6,            	52.2    ],
+            fill: false,
+            borderColor: 'rgb(191,189,73)',
+            tension: 0.1
+        }]
+    };
+    
+    
+    var uranCtx = document.getElementById('uranChart').getContext('2d');
+    var uranChart = new Chart(uranCtx, {
+        type: 'line',
+        data: uranData,
+        options: {}
+    });
+
+    document.getElementById('uranChart').addEventListener('click', function() {
+        window.location.href = 'https://www.ibisworld.com/de/bed/weltmarktpreis-fuer-uran/435/';
+    });
+
+    document.getElementById('uranChart').addEventListener('mouseover', function() {
+        this.style.cursor = 'pointer';
+    });
+
+    document.getElementById('uranChart').addEventListener('mouseout', function() {
+        this.style.cursor = 'default';
+    });
+    
+ 	// 다섯 번째 차트 (에너지 수입액)
+    var newData = {
+            labels: ['1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+                '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+            datasets: [{
+                label: '에너지 수입액 합계(백만달러)',
+                data: [7763,                	7580,                	6936,                	7263,                	7322,                	4996,                	5926,                	5920,                	7516,                	10909,                	12754,                	14654,                	15088,
+                	15472,                	19053,                	24242,                	27309,                	18276,                	22746,                	37887,                	33893,
+                	32289,                	38306,                	49600,                	66697,                	85566,                	94977,                	141475,                	91161,
+                	121655,                	172489,                	184800,                	178698,                	174138,                	102715,                	80942,                	109467,
+                	145970,                	126702,                	86553,                	137200],
+                fill: false,
+                borderColor: 'rgb(191,73,73)',
+                tension: 0.1
+            }]
+        };
+
+        var newCtx = document.getElementById('newChart').getContext('2d');
+        var newChart = new Chart(newCtx, {
+            type: 'line',
+            data: newData,
+            options: {}
+        });
+
+        document.getElementById('newChart').addEventListener('click', function() {
+            window.location.href = 'https://kosis.kr/statHtml/statHtml.do?orgId=339&tblId=DT_F_Y160&conn_path=I2';  // 링크 수정 필요
+        });
+
+        document.getElementById('newChart').addEventListener('mouseover', function() {
+            this.style.cursor = 'pointer';
+        });
+
+        document.getElementById('newChart').addEventListener('mouseout', function() {
+            this.style.cursor = 'default';
+        });
+
+</script>
+
+
 </body>
 </html>
