@@ -66,7 +66,7 @@
                     </div>
                     <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="분석 서비스 기능">
-                        <h3>분석 서비스 기능</h3>
+                        <h3>분석 서비스 기능</h3>	
                     </div>
                     <div class="item" data-animation="fade-up">
                         <img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">

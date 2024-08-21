@@ -1,26 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>       
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.css" integrity="sha512-earFJuyxuk1UIfnUubV3DGk2ysSejjmhMPb/4OXsqII9qmIbEwa1AaXrTqo4ivYizpbfyjXFZi6wENs94/BKWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.extensions.min.js" integrity="sha512-CG4suntOelKyziz99VyC3BrbQ60IOtpJ9RYQvI/0d6TdYWStN69gCb9OpPMlym+3OmNAr357Kv6FVqTk25Ej5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   
+  
+  <link rel="stylesheet" href="css/frame.css">
+  <script src="js/frame.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team4K 온실가스배출량</title>
   <link rel="stylesheet" href="css/greenHouse.css">
-  <script src="js/index.js"></script>
 </head>
 <body>
   <jsp:include page ="./includes/header.jsp" flush="true"/>
-  <div id="fullpage">
-    <main class="main-content">
+  	<div id="fullpage">
+		
 		<div class="section prediction">
 		    <div class="container">
 		        <h2>온실가스 배출량 예측 서비스</h2>
 		        <div class="prediction-items">
+		            <!-- Three.js를 위한 캔버스 추가 -->
+		            <div id="threejs-container" class="item fade-in">
+		                <!--  <h3>3D 모델 보기</h3>-->
+		                <canvas id="threejs-canvas"></canvas>
+		            </div>
+		            <!-- 기존 내용들 
 		            <div class="item fade-in">
 		                <h3>에너지 안보</h3>
 		                <p>지속 가능한 에너지 안보</p>
@@ -37,86 +46,70 @@
 		                <h3>이상기후현상 증가</h3>
 		                <p>이상기후로 인한 기후변화의 영향</p>
 		            </div>
+		            -->
 		        </div>
 		    </div>
 		</div>
 
-        <div class="section introduce">
-            <div class="container">
-                <h2>서비스 소개</h2>
-                <div class="introduce-items">
-                   <div class="item">
-                        <img src="images/mq1280.jpg" alt="예측 서비스 기능">
-                        <h3>예측 서비스 기능</h3>
-                    </div>
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="분석 서비스 기능">
-                        <h3>분석 서비스 기능</h3>
-                    </div>
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="레퍼런스 데이터 소개">
-                        <h3>레퍼런스 데이터 소개</h3>
-                        <p>신속하게 대응합니다.</p>
-                    </div>
+		
+        <div class="section sectionName">
+            <!-- 내용채워야함 -->
+        </div>
+        
+        <div class="section reference">
+    <div class="container">
+        <h2>레퍼런스 소개</h2>
+        <div class="reference-items">
+            <div class="row">
+            	<a href="https://michalsnik.github.io/aos/" target="_blank">
+	                <div class="item fade-in">
+	                    <h3>디자인 참조1</h3>
+	                    <p>AOS</p>
+	                </div>
+	             </a>
+                <div class="item fade-in">
+                    <h3>참조 2</h3>
+                    <p>블라블라</p>
+                </div>
+                <div class="item fade-in">
+                    <h3>참조 3</h3>
+                    <p>블라블라</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item fade-in">
+                    <h3>참조 4</h3>
+                    <p>블라블라</p>
+                </div>
+                <div class="item fade-in">
+                    <h3>참조 5</h3>
+                    <p>블라블라</p>
+                </div>
+                <div class="item fade-in">
+                    <h3>참조 6</h3>
+                    <p>블라블라</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item fade-in">
+                    <h3>참조 7</h3>
+                    <p>블라블라</p>
+                </div>
+                <div class="item fade-in">
+                    <h3>참조 8</h3>
+                    <p>블라블라</p>
+                </div>
+                <div class="item fade-in">
+                    <h3>참조 9</h3>
+                    <p>블라블라</p>
                 </div>
             </div>
         </div>
-        <div class="section effect">
-            <div class="container">
-                <h2>기대효과</h2>
-                <div class="effect-items">
-                    <div class="item">
-                        <div class="img-container">
-                            <img src="images/mq1280.jpg" alt="기대효과 이미지 1">
-                            <h3>에너지<br>안보<br>강화</h3>
-                            <div class="icon">
-                                <img src="images/energyIcon.png" alt="아이콘">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img-container">
-                            <img src="images/mq1280.jpg" alt="기대효과 이미지 2">
-                            <h3>효율적인<br>비용<br>집행</h3>
-                            <div class="icon">
-                                <img src="images/moneyIcon.png" alt="아이콘">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img-container">
-                            <img src="images/mq1280.jpg" alt="기대효과 이미지 3">
-                            <h3>효과 3</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="img-container">
-                            <img src="images/mq1280.jpg" alt="기대효과 이미지 4">
-                            <h3>효과 4</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section teamMember">
-            <div class="container">
-                <h2>팀원 소개</h2>
-                <div class="teamMember-items">
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="유안 공장">
-                        <h3>유안 공장</h3>
-                        <p>주소: ~</p>
-                    </div>
-                    <div class="item">
-                        <img src="images/mq1280.jpg" alt="진천 공장">
-                        <h3>진천 공장</h3>
-                        <p>주소: ~</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
     </div>
+</div>
+
+        
+   </div>
     <jsp:include page ="./includes/footer.jsp" flush="true"/>
 </body>
 </html>
