@@ -82,6 +82,69 @@ p {
     line-height: 1.5;
 }
 
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    animation: fadeBackground 2s forwards;
+}
+
+.calculator-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.calculator-items .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calculator-items .input-group label {
+    font-size: 18px;
+    color: #555;
+    flex: 1;
+}
+
+.calculator-items .input-group input {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    flex: 2;
+}
+
+.calculator-items .input-group span {
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+    flex: 1;
+    text-align: left;
+}
+
+.calculator-items .result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* 텍스트가 보이도록 색상 설정 */
+}
+
+
+
 .reference {
 	background-color: #EAEAEA;
 }
@@ -179,5 +242,6 @@ p {
     height: 100%;
     display: block;
 }
+
 
 

@@ -20,14 +20,14 @@
   	<div id="fullpage">
 		
 		<div class="section prediction">
-		    <div class="container">
-		        <h2>온실가스 배출량 예측 서비스</h2>
-		        <div class="prediction-items">
-		            <!-- Three.js를 위한 캔버스 추가 -->
-		            <div id="threejs-container" class="item fade-in">
-		                <!--  <h3>3D 모델 보기</h3>-->
-		                <canvas id="threejs-canvas"></canvas>
-		            </div>
+    <div class="container">
+        <h2>온실가스 배출량 예측 서비스</h2>
+        <div class="prediction-items">
+            <!-- 3D Plotly 그래프를 포함하는 iframe -->
+            <div id="plotly-container" class="item fade-in">
+                <iframe src="${pageContext.request.contextPath}/plotly_graph.html" 
+                        width="100%" height="600px" frameborder="0"></iframe>
+            </div>
 		            <!-- 기존 내용들 
 		            <div class="item fade-in">
 		                <h3>에너지 안보</h3>
@@ -51,9 +51,43 @@
 		</div>
 
 		
-        <div class="section sectionName">
-            <!-- 내용채워야함 -->
+        <div class="section calculator">
+    <div class="container">
+        <h2>온실가스 배출량 계산기</h2>
+        <div class="calculator-items">
+            <div class="input-group">
+                <label for="coal">석탄</label>
+                <input type="text" id="coal" placeholder="0">
+                <span>kg</span>
+            </div>
+            <div class="input-group">
+                <label for="oil">석유</label>
+                <input type="text" id="oil" placeholder="0">
+                <span>kg</span>
+            </div>
+            <div class="input-group">
+                <label for="lng">LNG</label>
+                <input type="text" id="lng" placeholder="0">
+                <span>kg</span>
+            </div>
+            <div class="input-group">
+                <label for="nuclear">원자력</label>
+                <input type="text" id="nuclear" placeholder="0">
+                <span>kg</span>
+            </div>
+            <div class="input-group">
+                <label for="renewable">신재생</label>
+                <input type="text" id="renewable" placeholder="0">
+                <span>kg</span>
+            </div>
+            <div class="result">
+                <h3>결과:</h3>
+                <span id="result"></span> MWh
+            </div>
         </div>
+    </div>
+</div>
+
         
         <div class="section reference">
     <div class="container">
