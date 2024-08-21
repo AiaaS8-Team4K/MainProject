@@ -9,12 +9,11 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   
   
-  <link rel="stylesheet" href="css/frame.css">
-  <script src="js/frame.js"></script>
+  <link rel="stylesheet" href="css/greenHouse.css">
+  <script src="js/greenHouse.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team4K 온실가스배출량</title>
-  <link rel="stylesheet" href="css/greenHouse.css">
 </head>
 <body>
   <jsp:include page ="./includes/header.jsp" flush="true"/>
