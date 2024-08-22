@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.AiaaS.Team4K.model.PriceDTO;
 import com.AiaaS.Team4K.service.TestService;
 
 @Controller
@@ -28,13 +31,22 @@ public class TestController {
 	public String moveBudget() {
 		return "budget";
 	}
+	
+	 @PostMapping("/budgetCalculate")
+	    public String budgetCalculate(@ModelAttribute PriceDTO prices, Model model) {	        
+	        double budgetPredict = (prices.getOilPrice() * 351700000) + (prices.getLNGPrice() * (-194300000)) -14060000000L;;
+	        model.addAttribute("result", budgetPredict);	        
+//			return "budget";
+			return "redirect:/budget";
+	    }	    
+	
 
 	@GetMapping("/frame")
 	public String moveFrame() {
 		return "frame";
 	}
 	
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String moveIndex() {
 		return "index";
 	}

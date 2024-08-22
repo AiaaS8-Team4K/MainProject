@@ -58,7 +58,7 @@
        	}
        	.fCopyRight p{
        		width:100vw;
-    		font-size: calc( 0.7vw + 0.7vh );
+    		font-size: calc( 0.5vw + 0.5vh );
     		margin: 0 0 1vh;
        	}
     </style>
@@ -66,7 +66,7 @@
 <body>
     <footer class="footer">
         <div class="footer-default-content">
-            <div class="fCopyRight"><p>&copy; 2024 AiaaS8 Team4K. All rights reserved.</p></div>
+            <div class="fCopyRight"><p>&copy; 2024 AIaaS8 Team4K. All rights reserved.</p></div>
             <div class="footerNav">
         	<ul>
         		<li><a href="#">메뉴 1-1</a></li>
