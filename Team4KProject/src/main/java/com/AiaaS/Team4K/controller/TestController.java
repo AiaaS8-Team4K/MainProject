@@ -34,7 +34,7 @@ public class TestController {
 		return "frame";
 	}
 	
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String moveIndex() {
 		return "index";
 	}

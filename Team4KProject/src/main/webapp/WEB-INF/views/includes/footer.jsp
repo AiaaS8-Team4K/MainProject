@@ -66,7 +66,7 @@
 <body>
     <footer class="footer">
         <div class="footer-default-content">
-            <div class="fCopyRight"><p>&copy; 2024 AiaaS8 Team4K. All rights reserved.</p></div>
+            <div class="fCopyRight"><p>&copy; 2024 AIaaS8 Team4K. All rights reserved.</p></div>
             <div class="footerNav">
         	<ul>
         		<li><a href="#">메뉴 1-1</a></li>
