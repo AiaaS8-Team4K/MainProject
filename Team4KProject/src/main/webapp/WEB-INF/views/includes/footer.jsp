@@ -58,7 +58,7 @@
        	}
        	.fCopyRight p{
        		width:100vw;
-    		font-size: calc( 0.7vw + 0.7vh );
+    		font-size: calc( 0.5vw + 0.5vh );
     		margin: 0 0 1vh;
        	}
     </style>
