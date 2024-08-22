@@ -196,10 +196,10 @@
                         <li><a href="greenHouse"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                     <ul>
-                        <li><a href="#"><span class="do-hyeon-regular">가뭄 홍수 발생</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">예측</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">분석</span></a></li>
-                        <li><a href="#"><span class="do-hyeon-regular">데이터 제공</span></a></li>
+                        <li><a href="weather"><span class="do-hyeon-regular">가뭄 홍수 발생</span></a></li>
+                        <li><a href="weather"><span class="do-hyeon-regular">예측</span></a></li>
+                        <li><a href="weather"><span class="do-hyeon-regular">분석</span></a></li>
+                        <li><a href="weather"><span class="do-hyeon-regular">데이터 제공</span></a></li>
                     </ul>
                 </nav>
                 <div id="menuIcon">☰</div>
