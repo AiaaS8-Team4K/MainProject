@@ -56,6 +56,14 @@ public class TestController {
 	public String moveGreenHouse() {
 		return"greenHouse";
 	}
+	
+	@GetMapping("/weather")
+	public String moveWeather() {
+		return"weather";
+	}
+	
+	
+	
 }
 
 

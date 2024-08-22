@@ -1,0 +1,173 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: calc(14px + 0.5vw);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-size: calc(24px + 1vw);
+}
+
+h2 {
+    font-size: calc(20px + 0.8vw);
+    text-align: center;
+}
+
+p {
+    font-size: calc(14px + 0.3vw);
+}
+
+.section {
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* #chartDescription {
+    margin-left: 20px; 차트와 텍스트 박스 사이의 간격
+    padding: 20px; 텍스트 박스 내부 여백
+    background-color: #f9f9f9; 박스 배경색
+    border: 1px solid #ddd; 박스 테두리
+    border-radius: 5px; 박스 모서리를 둥글게 처리
+    width: 500px; 텍스트 박스의 너비
+    height: 700px; 텍스트 박스의 높이
+    box-sizing: border-box; 패딩과 테두리가 전체 크기에 포함되도록 설정
+} */
+
+/* .section.predictionWeather {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
+#chartContainer {
+    width: 40%;
+    height:100%;
+}
+
+#myChart1, #myChart2 {
+    width: 100%;
+    height: 50%; /* 차트의 높이를 50%로 줄임 */
+    margin-bottom: 20px; /* 차트 간의 간격 */
+}
+
+
+#chartDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    margin-left: 20px;
+}
+
+#chartDescription {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    flex: 1;
+}
+
+#chartDescription p {
+    margin: 40px 20px 0 20px;
+}
+
+#chartDescription h3 {
+    margin: 30px 20px 0 20px;
+}
+
+#inputForm label {
+    font-size: 16px;
+    display: block;
+}
+
+#inputForm input[type="text"] {
+    width: 40%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+	height : 30px;
+}
+
+#inputForm button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    cursor: pointer;
+	box-sizing: border-box;
+	position : relative;
+	top: 2px;
+}
+
+/* .background{
+    position: relative;
+    background-color: #EAEAEA;
+    border-radius: 15%;
+    overflow: hidden;
+    padding-top: 20px; 상단을 줄이기 위해 여백 추가
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: -20px; 위쪽을 20px 올려서 잘라내는 효과
+    left: 0;
+    right: 0;
+    height: 40px; 잘라낸 영역의 높이
+    background-color: #EAEAEA;
+    border-radius: 15% 15% 0 0; 윗부분만 둥글게
+    z-index: -1;
+} */
+
+
+
+/* Responsive */
+@media (max-width: 1220px) {
+    /* .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 80%;
+        margin-bottom: 2rem;
+    } */
+}
+
+@media (max-width: 768px) {
+    /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero video {
+        height: 70vh;
+    }
+    .intention .intention-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}
+
+@media (max-width: 480px) {
+    /* .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intention .philosophy-items, .introduce .introduce-items, .teamMember .teamMember-items, .effect .effect-items {
+        flex-direction: column;
+    }
+    .intention .item, .introduce .item, .teamMember .item, .effect .item {
+        width: 100%;
+    } */
+}
