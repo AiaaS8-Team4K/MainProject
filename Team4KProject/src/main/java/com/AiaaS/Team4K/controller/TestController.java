@@ -23,10 +23,6 @@ public class TestController {
 	@Autowired
 	TestService testService;
 	
-	@Autowired
-	WeatherService weatherService;
-	
-	
 	@GetMapping("/count")
 	public String empCount(@RequestParam(value="deptid",required=false,defaultValue="0")int deptid, Model model) {
 		if(deptid==0) {
@@ -68,30 +64,9 @@ public class TestController {
 	}
 	
 	@GetMapping("/weather")
-	public String moveWeather(Model model) {
-		String filePath = "/resources/csv/weather/world-total-ghg-emissions.csv";
-		
-		
-        try {
-            List<Double> emissions = weatherService.readEmissionData(filePath);
-            List<Double> normalizedEmissions = weatherService.normalizeData(emissions);
-            System.out.println(emissions);
-            model.addAttribute("emissions", normalizedEmissions);
-        } catch (IOException e) {
-            e.printStackTrace();
-            model.addAttribute("error", "파일 읽기 오류가 발생했습니다.");
-        } catch (CsvValidationException e) {
-            e.printStackTrace();
-            model.addAttribute("error", "CSV 유효성 검사 오류가 발생했습니다.");
-        }
-        
+	public String moveWeather() {
 		return"weather";
 	}
-	
-	
-	
-	
-	
 }
 
 
