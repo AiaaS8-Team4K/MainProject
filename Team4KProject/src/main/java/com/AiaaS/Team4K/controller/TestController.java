@@ -1,9 +1,5 @@
 package com.AiaaS.Team4K.controller;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.AiaaS.Team4K.model.PriceDTO;
 import com.AiaaS.Team4K.service.TestService;
-import com.AiaaS.Team4K.service.WeatherService;
-import com.opencsv.exceptions.CsvValidationException;
 
 @Controller
 public class TestController {
