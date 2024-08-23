@@ -34,10 +34,10 @@ public class TestController {
 	
 	 @PostMapping("/budgetCalculate")
 	    public String budgetCalculate(@ModelAttribute PriceDTO prices, Model model) {	        
-	        double budgetPredict = (prices.getOilPrice() * 351700000) + (prices.getLNGPrice() * (-194300000)) -14060000000L;;
+	        double budgetPredict = (prices.getOilPrice() * 351700000) + (prices.getLNGPrice() * (-194300000)) -14060000000L;
 	        model.addAttribute("result", budgetPredict);	        
-//			return "budget";
-			return "redirect:/budget";
+		return "budget";
+//			return "redirect:/budget";
 	    }	    
 	
 
