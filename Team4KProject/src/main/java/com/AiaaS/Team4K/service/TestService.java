@@ -20,4 +20,5 @@ public class TestService {
 	public int getEmpCount(int deptid) {
 		return testRepository.getEmpCount(deptid);
 	}
+	
 }

@@ -75,6 +75,13 @@
 			<version>2.0.6</version>
 		</dependency>
 		
+		<!-- OpenCSV -->
+		<dependency>
+	        <groupId>com.opencsv</groupId>
+	        <artifactId>opencsv</artifactId>
+	        <version>5.5.2</version>
+    	</dependency>
+		
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
